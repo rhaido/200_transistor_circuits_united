@@ -1,0 +1,3040 @@
+\newpage
+
+# TRANSISTOR CIRCUITS, Part II
+
+## RECTIFYING a VOLTAGE
+
+![RectifierCcts-1](images/RectifierCcts-1-bw.png)
+
+![RectifierCcts-1](images/RectifierCcts-2-bw.png)
+
+These circuits show how to change an oscillating voltage (commonly called AC)
+to DC. The term AC means Alternating Current but it really means Alternating
+Voltage as the rising and falling voltage produces an increasing and
+decreasing current.
+
+The term DC means Direct Current but it actually means Direct or unchanging
+Voltage.
+
+The output of the following circuits will not be pure DC (like that from a
+battery) but will contain ripple. Ripple is reduced by adding a capacitor
+(electrolytic) to the output.
+
+## DARK DETECTOR with Beep-Beep-Beep Alarm
+
+![Alarm-Beep-Beep](images/Alarm-Beep-Beep.png)
+
+This circuit detects darkness and produces a beep-beep-beep alarm. The
+first two transistors form a high-gain amplifier with feedback via the 4u7
+to produce a low-frequency oscillator. This provides voltage for the second
+oscillator (across the 1k resistor) to drive a speaker.
+
+## Project can turn ON when DARK
+
+![DarkforProjectTurn-On](images/DarkforProjectTurn-On.png)
+
+This circuit detects darkness and allows the
+project to turn on. The project can be any circuit that operates from 3v
+to 12v.
+
+The components have been chosen for a 6v project that requires 500mA.
+
+## 3-PHASE SINEWAVE GENERATOR
+
+![3-PhaseSinewaveModified](images/3-PhaseSinewaveModified.png)
+
+This circuit produces a sinewave and each phase can be tapped at the point
+shown. The secret to producing a good waveform is the addition of the 2k2
+resistor in the 0v rail This circuit and waveform is provided by Jack Hoffnung.
+
+![3-PhaseWaveform](images/3-PhaseWaveform.jpg)
+
+Two of the three waveforms - we only have dual trace CRO's !!!!
+
+## TRANSFORMERLESS POWER SUPPLY
+
+![TransformerlessPowerSupply](images/TransformerlessPowerSupply.png)
+
+This clever design uses 4 diodes in a bridge to produce a fixed voltage
+power supply capable of supplying 35mA.
+
+All diodes (every type of diode) are zener diodes. They all break down at a
+particular voltage. The fact is, a power diode breaks down at 100v or 400v
+and its zener characteristic is not useful.
+
+But if we put 2 zener diodes in a bridge with two ordinary power diodes,
+the bridge will break-down at the voltage of the zener. This is what we have
+done. If we use 18v zeners, the output will be 17v4.
+
+When the incoming voltage is positive at the top, the left zener provides
+18v limit (and the other zener produces a drop of 0.6v) This allows the right
+zener to pass current just like a normal diode. The output is 17v4. The same
+with the other half-cycle.
+
+The current is limited by the value of the X2 capacitors and this is
+7mA for each 100n when in full-wave (as per this circuit). We have 1u
+capacitance. Theoretically the circuit will supply 70mA but we found it will
+only deliver 35mA before the output drops. The capacitors should comply with
+X1 or X2 class. The 10R is a safety-fuse resistor.
+
+The problem with this power supply is the "live" nature of the negative
+rail. When the power supply is connected as shown, the negative rail is 0.7v
+above neutral. If the mains is reversed, the negative rail is 340v (peak) above
+neutral and this will kill you as the current will flow through the diode
+and be lethal. You need to touch the negative rail (or the positive rail)
+and any earthed device such as a toaster to get killed. The only solution
+is the project being powered must be totally enclosed in a box with no outputs.
+
+A **TRANSFORMERLESS POWER SUPPLY** is also called a **CAPACITOR FED POWER
+SUPPLY**.  It is very dangerous.
+
+Here's why:
+
+A **Capacitor Power Supply** uses a capacitor to interface between a “high
+voltage supply” and a low voltage – called THE POWER SUPPLY.
+
+In other words a capacitor is placed between a “high voltage supply” we
+call THE MAINS (between 110v and 240v) and a low voltage that may be 9v to 12v.
+Even though a capacitor consists of two plates that do not touch each other,
+a **Capacitor Power Supply** is a very dangerous project, for two reasons.
+
+You may not think electricity can pass though a capacitor because it consists
+of plates that do not touch each other.
+
+But a capacitor works in a slightly different way. A capacitor connected to
+the mains works like this: Consider a magnet on one side of a door. On the
+other side we have a sheet of metal. As you slide the magnet up the door,
+the sheet of metal rises too.
+
+The same with a capacitor. As the voltage on one side of the capacitor
+rises, the voltage on the other side is “pulled out of the ground” -
+and it rises too.
+
+If you stand on the ground and hold one lead of the capacitor and connect the
+other to the active side of the “mains,” the capacitor will “pull”
+120v or 240v “out of the ground” and you will get a shock.
+
+Don’t ask “how” or “why.” This is just the simplest way to describe
+how you get a shock via a capacitor that consists of two plates.
+
+If the capacitor “shorts” between the two plates, the 120v or 240v will
+be delivered to your power supply and create damage.
+
+Secondly, if any of the components in your power supply become open-circuit,
+the voltage on the power supply will increase.  But the most dangerous
+feature of this type of power supply is reversal of the mains leads.
+
+The circuit is designed so that the neutral lead goes to the earth of your
+power supply.
+
+This means the active is connected to the capacitor.
+
+Now, the way the active works is this: The active lead rises 120x 1.4 =
+180v in the positive direction and then drops to 180v in the opposite
+direction. In other words it is 180v higher than the neutral line then 180v
+lower than the neutral.
+
+For 240v mains, this is 325v higher then 325v lower.  The neutral is connected
+to the chassis of your project and if you touch it, nothing will happen. It
+does not rise or fall.
+
+But suppose you connect the power leads around the wrong way.
+
+The active is now connected to the chassis and if you touch the chassis and
+a water pipe, you will get a 180v or 345v shock.
+
+That’s why a CAPACITOR-FED power supply must be totally isolated.  Now we
+come to the question: How does a capacitor produce a 12v power supply?
+When a capacitor is connected to the mains, one lead is rising and falling.
+Depending on the size of the capacitor, it will allow current to flow into
+and out of the other lead.
+
+If the capacitor is a large value, a high current will flow into and out of
+the lead. In addition, a high voltage will allow a higher current to flow.
+
+This current is “taken out of the ground” and “flows back into the
+ground.” It does not come from the mains. The mains only: “influences”
+the flow of current.
+
+Thus we have a flow of current into and out of the capacitor.
+
+If you put a resistor between the capacitor and “ground,” the amount of
+current that will flow, depends on 3 things, the amplitude of the voltage,
+the size of the capacitor and the speed of the rise and fall.
+
+When current flows through a resistor, a voltage develops across the resistor
+and if we select the correct value of resistance, we will get a 12v power
+supply.
+
+### THE OUTPUT VOLTAGE
+
+The OUTPUT VOLTAGE of all transformerless power supplies will be about 50%
+HIGHER than the mains voltage if a LOAD is not connected. That's RIGHT:
+The output of a 120v CAPACITOR POWER SUPPLY (transformerless power supply)
+will be about 180v and a 240v mains transformerless power supply will be
+about 345v.  How do you get a 12v or 24v supply????
+
+It works like this: The transformerless power supply is a CURRENT-DELIVERED
+power supply. In other words we have to talk about CURRENT-VALUES and not
+voltages.
+
+For a bridge circuit (called a full-wave design) it will deliver 7mA for
+each 100n. Suppose we have 220n. We have 15mA available.
+
+We take the 15mA and say: How many volts will develop across a 100R load? The
+answer = 0.015 x 100 = 15v. I f we use 82R the voltage will be about 12v. If we
+use 220R the voltage will be 33v. That's how the output voltage is developed.
+
+If you add another 220n across the 220n, the voltages will be DOUBLE. It's
+as simple as that.
+
+## LEDs on 240v
+
+![LEDs-on-240v](images/LEDs-on-240v.png)
+
+I do not like any circuit connected directly to 240v mains. However
+Christmas tress lights have been connected directly to the mains for 30
+years without any major problems.
+
+Insulation must be provided and the lights (LEDs) must be away from prying
+fingers.
+
+You need at least 50 LEDs in each string to prevent them being damaged via
+a surge through the 1k resistor - if the circuit is turned on at the peak
+of the waveform. As you add more LEDs to each string, the current will drop
+a very small amount until eventually, when you have 90 LEDs in each string,
+the current will be zero.
+
+For 50 LEDs in each string, the total characteristic voltage will be 180v
+so that the peak voltage will be 330v - 180v = 150v. Each LED will see less
+than 7mA peak during the half-cycle they are illuminated. The 1k resistor will
+drop 7v - since the RMS current is 7mA (7mA x 1,000 ohms = 7v). No rectifier
+diodes are needed. The LEDs are the "rectifiers." Very clever. You must have
+LEDs in both directions to charge and discharge the capacitor. The resistor
+is provided to take a heavy surge current through one of the strings of LEDs
+if the circuit is switched on when the mains is at a peak.
+
+This can be as high as 330mA if only 1 LED is used, so the value of this
+resistor must be adjusted if a small number of LEDs are used. The LEDs above
+detect peak current.
+
+**A 100n cap will deliver 7mA RMS or 10mA peak in full wave or 3.5mA RMS
+(10mA peak for half a cycle) in half-wave**. (when only 1 LED is in each string).
+
+![CapacitorSupply](images/CapacitorSupply.png)
+
+The current-capability of a capacitor needs more explanation. In the diagram
+on the left we see a capacitor feeding a full-wave power supply. This is
+exactly the same as the LEDs on 240v circuit above. Imagine the LOAD resistor
+is removed. Two of the diodes will face down and two will face up. This
+is exactly the same as the LEDs facing up and facing down in the circuit
+above. The only difference is the mid-point is joined. Since the voltage on
+the mid-point of one string is the same as the voltage at the mid-point of the
+other string, the link can be removed and the circuit will operate the same.
+
+This means each 100n of capacitance will deliver 7mA RMS (10mA peak on
+each half-cycle).  In the half-wave supply, the capacitor delivers 3.5mA
+RMS (10mA peak on each half-cycle, but one half-cycle is lost in the diode)
+for each 100n to the load, and during the other half-cycle the 10mA peak is
+lost in the diode that discharges the capacitor.
+
+You can use any LEDs and try to keep the total voltage-drop in each string
+equal. Each string is actually working on DC. It's not constant DC but
+varying DC. In fact is it zero current for 1/2 cycle then nothing until
+the voltage rises above the total characteristic voltage of all the LEDs,
+then a gradual increase in current over the remainder of the cycle, then
+a gradual decrease to zero over the falling portion of the cycle, then
+nothing for 1/2 cycle. Because the LEDs turn on and off, you may observe
+some flickering and that's why the two strings should be placed together.
+
+## BOOK LIGHT
+
+![BookLight](images/BookLight.png)
+
+This circuit keeps the globe illuminated for a few seconds after the switch is
+pressed.
+
+There is one minor fault in the circuit. The 10k should be increased to 100k
+to increase the "ON" time.
+
+<!--full-->The photo shows the circuit built with surface-mount components:
+
+<!--full-->![BookLight](images/BookLight.jpg)
+
+## CAMERA ACTIVATOR
+
+This circuit was designed for a customer who wanted to trigger a camera after
+a short delay.
+
+![CameraActivator](images/CameraActivator.png)
+
+The output goes HIGH about 2 seconds after the switch is pressed. The LED turns
+on for about 0.25 seconds.  The circuit will accept either active HIGH or LOW
+input and the switch can remain pressed and it will not upset the operation of
+the circuit. The timing can be changed by adjusting the 1M trim pot and/or
+altering the value of the 470k.
+
+## POWER SUPPLIES - FIXED
+
+![5vSupplies-fixed](images/5vSupplies-fixed.png)
+
+A simple power supply can be made with a component called a "3-pin
+regulator or 3-terminal regulator" It will provide a very low ripple output
+(about 4mV to 10mV provided electrolytics are on the input and output.
+
+The diagram above shows how to connect a regulator to create a power
+supply. The 7805 regulators can handle 100mA, 500mA and 1 amp, and produce
+an output of 5v, as shown.
+
+These regulators are called linear regulators and drop about 4v across them -
+minimum. If the current flow is 1 amp, 4watts of heat must be dissipated via
+a large heatsink. If the output is 5v and input 12v, 7volts will be dropped
+across the regulator and 7watts must be dissipated.
+
+## POWER SUPPLIES - ADJUSTABLE
+
+![5vSupplies-adj](images/5vSupplies-adj.png)
+
+The LM317 regulators are adjustable and produce an output from 1.25 to about
+35v. The LM317T regulator will deliver up to 1.5amp.
+
+## POWER SUPPLIES - ADJUSTABLE using 7805
+
+![5vSupplies-jackUp](images/5vSupplies-jackUp.png)
+
+The 7805 range of regulators are called "fixed regulators" but they can be
+turned into adjustable regulators by "jacking-up" their output voltage. For a
+5v regulator, the output can be 5v to 30v.
+
+## POWER SUPPLIES - ADJUSTABLE from 0v
+
+![5vSupplies-0v](images/5vSupplies-0v.png)
+
+The LM317 regulator is adjustable from 1.25 to about 35v. To make the output
+0v to 35v, two power diodes are placed as shown in the circuit. Approx 0.6v is
+dropped across each diode and this is where the 1.25v is "lost."
+
+## LOW INPUT VOLTAGE
+
+![LowInputVoltage](images/LowInputVoltage.png)
+
+This clever circuit lets you know if the voltage across the regulator drops
+below 2v.
+
+This is very important when you are increasing the output voltage and the
+regulator SUDDENLY drops out of regulation because the voltage across it is
+insufficient.
+
+This can be due to the ripple causing the problem and you will see the green
+LED flickering.
+
+You can add extra diodes in series with the LED to get a safety margin of 2.6v
+or 3.2v The 220R on the output is only needed when the output is not loaded and
+the current taken by the LED needs to be brought from the 0v rail as the output
+does not like to dragged higher than 5v (or its present output voltage).
+
+## 5v POWER SUPPLY
+
+![5vSupplies-5v](images/5vSupplies-5v.png)
+
+Using the the LM317 regulator to produce 5v supply (5.04v):
+
+## CONSTANT CURRENT
+
+![ConstantCurrent](images/ConstantCurrent.png)
+
+This constant current circuit can be adjusted to any value from a few milliamp
+to about 500mA - this is the limit of the BC337 transistor.
+
+The circuit can also be called a current-limiting circuit and is ideal in a
+bench power supply to prevent the circuit you are testing from being damaged.
+
+Approximately 4v is dropped across the regulator and 1.25v across the
+current-limiting section, so the input voltage (supply) has to be 5.25v above
+the required output voltage. Suppose you want to charge 4 Ni-Cad cells. Connect
+them to the output and adjust the 500R pot until the required charge-current is
+obtained.
+
+The charger will now charge 1, 2, 3 or 4 cells at the same current. But you
+must remember to turn off the charger before the cells are fully charged as the
+circuit will not detect this and over-charge the cells.
+
+The LM 317 3-terminal regulator will need to be heatsinked.
+
+This circuit is designed for the LM series of regulator as they have a voltage
+differential of 1.25v between "adj" and "out" terminals.
+
+7805 regulators can be used but the losses in the BC337 will be 4 times
+greater as the voltage across it will be 5v.
+
+## THE POWER SUPPLY
+
+![PowerSupply-1](images/PowerSupply-1.png)
+
+The simplest power supply is a transformer, diode and electrolytic: But the
+ripple will be very high because only every alternate portion of the ac signal
+is being passed through the diode and the electrolytic (called the filter
+capacitor) cannot smooth the ripple very well. The result will be a loud hum if
+powering an amplifier.
+
+An improvement is to use a bridge rectifier. This will reduce the ripple and
+reduce the hum because the waveform to the electrolytic consists of pulses that
+are closer together and the electrolytic does not have to supply as much energy
+because the pulses are closer together.
+
+![PowerSupply-2](images/PowerSupply-2.png)
+
+### ZENER REGULATION
+
+The next improvement is to reduce the ripple with a zener diode.
+
+The zener diode is placed across the voltage you want to smooth and as the
+voltage increases, the zener diode turns ON more and additional current flows
+through it to the 0v rail. This reduces the voltage but the result is a
+smoother voltage.
+
+This is called a SHUNT REGULATOR or ZENER SHUNT REGULATOR or ZENER DIODE
+STABILIZER.
+
+![PowerSupply-3](images/PowerSupply-3.png)
+
+In place of a zener, we can use a transistor.
+
+### THE SHUNT TRANSISTOR
+
+A transistor placed across the voltage to be regulated (or stabilized)
+is called a SHUNT TRANSISTOR, because it shunts or sends the unwanted extra
+waveform to the 0v rail, and thereby smoothes the voltage.
+
+It uses a zener to sense the voltage as in the zener regulator circuit above,
+but the current through the zener is less because the transistor turns ON
+and reduces the voltage. A lower-wattage zener diode can be used and since
+less current flows through it, the voltage across it will be more stable.
+
+This arrangement is better than a zener diode regulator due the improved
+stability of the diode with less current flowing through it and the circuit
+will deliver about 100 times more current due to the inclusion of the
+transistor.
+
+However, this circuit is very wasteful because the maximum current is flowing
+all the time and being sent to the 0v rail. When you add a load (such as
+an amplifier), the current is diverted from the shunt transistor and into
+the amplifier. The amplifier can only take current up to the maximum the
+transistor was passing to the 0v rail.
+
+![PowerSupply-4](images/PowerSupply-4.png)
+
+### THE PASS TRANSISTOR
+
+A PASS TRANSISTOR is less wasteful than a SHUNT TRANSISTOR. The circuit
+takes almost no current (when the amplifier is not connected).
+
+The ripple on the output is determined by the effectiveness of the zener
+(due to the low current is is required to pass) and the transistor (passes
+this voltage and) amplifies the current about 100 times.
+
+![PowerSupply-5](images/PowerSupply-5.png)
+
+No values have been provided for these circuits are they are intended to
+explain Shunt Transistor and Pass Transistor. The type of transistor and
+value of resistor in the power line will depend on the current.
+
+## THE ELECTRONIC FILTER
+
+![ElectronicFilter](images/ElectronicFilter.png)
+
+Here is a simple circuit to reduce the ripple from a power supply by a factor
+of about 100. This means a 20mV ripple will be 0.2mV and will not be noticed.
+This is important when you are powering an FM bug from a plug pack. The
+background hum is annoying and very difficult to remove with electrolytics.
+This circuit is the answer. The 1k and 100u form a filter that makes the 100u
+one hundred times more effective than if placed directly on the supply-line.
+The transistor detects the voltage on the base and also detects the very small
+ripple.
+
+As current is taken by the load, about 100th of this current is required by
+the base and if the load current is 100mA, the current into the base will
+be 1mA and one volt will be dropped across the 1k resistor.
+
+The circuit is suitable for up to 100mA. A power transistor can be used, but
+the 1k will have to be reduced to 220R for 500mA output. The output of the
+circuit is about 2v less than the output of the plug pack.  By adding a zener
+across the electro, the output voltage will remain much more constant (fixed).
+
+If a zener is not added, the output voltage will drop as the current
+increases due to a factor called REGULATION. This is the inability of the
+small transformer to provide a constant voltage. The addition of the 3
+components only reduces the RIPPLE portion of the voltage - and does not
+change the fact that the voltage will droop when current is increased. It
+requires a zener to fix this problem.
+
+This circuit can also be called: RIPPLE SUPPRESSOR, RIPPLE REDUCER or
+CAPACITANCE MULTIPLIER. The 100u can be increased to 470u or 1,000u.
+
+## 5v FROM OLD CELLS - Circuit 1
+
+![5v-from-old-cells](images/5v-from-old-cells.png)
+
+This circuit takes the place of a 78L05 3-terminal regulator. It produces a
+constant 5v @ 100mA. You can use any old cells and get the last of their
+energy. Use an 8-cell holder. The voltage from 8 old cells will be about 10v
+and the circuit will operate down to about 7.5v. The regulation is very good at
+10v, only dropping about 10mV for 100mA current flow (the 78L05 has 1mV drop).
+As the voltage drops, the output drops from 5v on no-load to 4.8v and 4.6v on
+100mA current-flow. The pot can be adjusted to compensate for the voltage-drop.
+This type of circuit is called a LINEAR REGULATOR and is not very efficient
+(about 50% in this case). See Circuit 2 below for BUCK REGULATOR circuit (about
+85% efficient).
+
+<!--full-->The regulator connected to a 12v battery pack:
+
+<!--full-->![RegOn12vBattIso](images/RegOn12vBattIso.jpg)
+
+<!--full-->The regulator connected to a 9v battery:
+
+<!--full-->![RegOn9vBattIso](images/RegOn9vBattIso.jpg)
+
+
+The battery snap plugs into the pins on the 5v regulator board
+with the red lead going to the negative output of the board as the battery
+snap is now DELIVERING voltage to the circuit you are powering.
+
+<!--full-->![RegLeads](images/RegLeads.jpg)
+<!--full-->
+<!--full-->![RegBoard](images/RegBoard.jpg)
+<!--full-->
+<!--full-->A close-up of the regulator module.
+
+## 5v FROM OLD CELLS - Circuit 2
+
+![BuckRegulator](images/BuckRegulator.png)
+
+This circuit is a BUCK REGULATOR. It can take the place of a 78L05 3-terminal
+regulator, but it is more efficient. It produces a constant 5v @ up to 200mA.
+You can use any old cells and get the last of their energy. Use an 8-cell
+holder. The voltage from 8 old cells will be about 10v and the circuit will
+operate down to about 7.5v. The regulation is very good at 10v, only dropping
+10mV for up to 200mA output.
+
+<!--full-->![BuckRegulator](images/BuckRegulator.jpg)
+
+## INCREASING THE OUTPUT CURRENT
+
+![HighCurrentPowerSupply](images/HighCurrentPowerSupply.png)
+
+The output current of all 3-terminal regulators can be increased by including a
+pass transistor. This transistor simply allows the current to flow through the
+collector-emitter leads.  The output voltage is maintained by the 3-terminal
+regulator but the current flows through the "pass transistor." This transistor
+is a power transistor and must be adequately heatsinked.
+
+Normally a 2N3055 or TIP3055 is used for this application as it will handle
+up to 10 amps and creates a 10 amp power supply. The regulator can be 78L05
+as all the current is delivered by the pass transistor.
+
+## SOFT START
+
+![SoftStart](images/SoftStart.png)
+
+The output voltage of a 3-terminal regulator can be designed to rise slowly.
+This has very limited application as many circuits do not like this.
+
+## TURN-OFF DELAY
+
+![DelayTurnOff](images/DelayTurnOff.png)
+
+These 4 circuits are all the same. They supply power
+to a project for a short period of time. You can select either PNP or NPN
+transistors or Darlington transistors. The output voltage gradually dies
+and this will will produce weird effects with some projects. See circuit
+4 in Time Delay Circuits (below) for a relay that remains active for a few
+seconds after the push button has been released.
+
+## TIME DELAY CIRCUITS
+
+![TimeDelay-Ccts](images/TimeDelay-Ccts.png)
+
+These 3 circuits are all the same. They turn on a relay after a period of time.
+
+The aim of the circuit is to charge the electrolytic to a reasonably high
+voltage before the circuit turns ON. In fig 1 the voltage will be above 5v6. In
+fig 2 the voltage will be above 3v6. In fig 3 the voltage will be above 7v.
+
+![TimeDelay4](images/TimeDelay4.png)
+
+The relay in this circuit will remain active for a few seconds after the
+push button has been released.
+
+The value of the 1k resistor and electrolytic can be adjusted to suit
+individual requirements.
+
+## LED DETECTS LIGHT 2
+
+![LEDdetectsLight](images/LEDdetectsLight.png)
+
+The LED in this circuit will detect light to turn on the oscillator. Ordinary
+red LEDs do not work. But green LEDs, yellow LEDs and high-bright white LEDs
+and high-bright red LEDs work very well.
+
+The output voltage of the LED is up to 600mV when detecting very bright
+illumination.  When light is detected by the LED, its resistance decreases
+and a very small current flows into the base of the first transistor. The
+transistor amplifies this current about 200 times and the resistance between
+collector and emitter decreases. The 330k resistor on the collector is a
+current limiting resistor as the middle transistor only needs a very small
+current for the circuit to oscillate. If the current is too high, the circuit
+will "freeze."
+
+The piezo diaphragm does not contain any active components and relies on
+the circuit to drive it to produce the tone. A different [LED DETECTS LIGHT]
+circuit in the first part of this eBook.
+
+## TRAIN DETECTORS
+
+![TrainDetector](images/TrainDetector.png)
+
+In response to a reader who wanted to parallel TRAIN DETECTORS, here is a diode
+OR-circuit. The resistor values on each detector will need to be adjusted
+(changed) according to the voltage of the supply and the types of detector
+being used. Any number of detectors can be added. See Talking Electronics
+website for train circuits and kits including Air Horn, Capacitor Discharge
+Unit for operating point motors without overheating the windings, Signals,
+Pedestrian Crossing Lights and many more.
+
+## TRACK POLARITY
+
+![TrackPolarity](images/TrackPolarity.png)
+
+This circuit shows the polarity of a track via a 3-legged LED. The LED is
+called dual colour (or tri-colour) as it shows red in one direction and green
+in the other (orange when both LEDs are illuminated).
+
+## DECAYING FLASHER
+
+![DecayingFreq555](images/DecayingFreq555.png)
+
+In response to a reader who wanted a flashing LED circuit
+that slowed down when a button was released, the above circuit increases
+the flash rate to a maximum and when the button is released, the flash rate
+decreases to a minimum and halts.
+
+## SIMPLE FLASHER
+
+![Flasher-simple](images/Flasher-simple.png)
+
+This simple circuit flashes a globe at a rate according
+to the value of the 180R and 2200u electrolytic.
+
+## LATCHING RELAY
+
+To reduce the current in battery operated equipment a
+relay called LATCHING RELAY can be used. This is a relay that latches itself
+ON when it receives a pulse in one direction and unlatches itself when it
+receives a pulse in the other direction.
+
+The following diagram shows how the coil makes the magnet click in the
+two directions.
+
+![latching-Relay](images/latching-Relay.png)
+
+![PulseLatchingRelay](images/PulseLatchingRelay.png)
+
+To operate this type of relay, the voltage must be reversed to unlatch
+it. The circuit above produces a strong pulse to latch the relay ON and the
+input voltage must remain HIGH. The 220u gradually charges and the current
+falls to a very low level. When the input voltage is removed, the circuit
+produces a pulse in the opposite direction to unlatch the relay.
+
+The pulse-latching circuit above can be connected to a microcontroller via
+the circuit down here. The electrolytic can be increased to 1,000u to
+cater for relays with a low resistance.
+
+![PulseLatchingRelay-2](images/PulseLatchingRelay-2.png)
+
+If you want to latch an ordinary relay so it remains ON after a pulse, the
+next circuits can be used. Power is needed all the time to keep the relay ON.
+
+![latching-Relay-2](images/latching-Relay-2.png)
+
+If your latching relay latches when it receives a 50mS pulse and unlatches
+when it receives a 50mS pulse in the opposite direction, you just need a
+reversing switch and a push button. You just need to flick the switch to
+the latch or unlatch position and push the button very quickly.
+
+![LatchWithSw](images/LatchWithSw.png)
+
+To operate a latching relay from a signal, you need the following circuit:
+
+![LatchWith2Relays](images/LatchWith2Relays.png)
+
+To use this circuit you have to understand some of the technical requirements.
+
+When the signal is HIGH it has driving power and is classified a low impedance
+and it will only turn ON the BC547. If you make sure the signal is HIGH when
+the circuit is turned ON, you will have no problem.
+
+But if the signal is LOW when the 12v power is applied, the signal-line will
+be effectively "floating" and the four 1k resistors in series will turn on
+both transistors.
+
+The 10u is designed to delay to BC547 and it will produce the longer pulse to
+de-activate the relay.  You will have to adjust the value of the resistors and
+electrolytics to get the required pulse length and the required delay. This
+circuit is just a "starting-point."
+
+This circuit has been requested by: Stephen Derrick-Jehu email: [d-js@xtra.co.nz]
+Contact him for the success of this circuit, with his 8 ohm 12v EHCOTEC
+valve B23E-1-ML-4.5vDC.
+
+Specifications:
+
+- 4.5-Volt DC minimum coil voltage
+- 12-Volt DC maximum coil voltage
+- 50 mS (min) pulse opens valve
+- 50 mS pulse (min) with reverse polarity closes valve
+- 2.5 W power consumption at 4.5vDC
+
+The following circuit pulses a latching relay every 30 seconds. The circuit
+only consumes current during the 50mS latching period.
+
+![50mS-Reversal](images/50mS-Reversal.png)
+
+The values for the timing components have not been provided. These can be
+worked out by experimentation.
+
+Latching Relays are expensive but a 5v Latching Relay is available from:
+Excess Electronics for $1.00 as a surplus item. It has 2 coils and requires
+the circuit at the left. A 5v Latching Relay can be use on 12v as it is
+activated for a very short period of time.
+
+![latching-Relay-3](images/latching-Relay-3.png)
+
+A double-pole (ordinary) relay and transistor can be connected to provide
+a toggle action.
+
+![latching-Relay-4](images/latching-Relay-4.png)
+
+The circuit comes on with the relay de-activated and the contacts connected
+so that the 470u charges via the 3k3. Allow the 470u to charge. By pressing
+the button, the BC547 will activate the relay and the contacts will change
+so that the 3k3 is now keeping the transistor ON.  The 470u will discharge
+via the 1k. After a few seconds the electro will be discharged. If the
+press-button is now pushed for a short period of time, the transistor will
+turn off due to the electro being discharged.
+
+A single-coil latching relay normally needs a reverse-voltage to unlatch
+but the following circuit provides forward and reverse voltage by using
+2 transistors in a very clever H-design.
+
+![latching-Relay-5](images/latching-Relay-5.png)
+
+The pulse-ON and pulse-OFF can be provided from two lines of the
+microcontroller.
+
+A normal relay can be activated by a short tone and de-activated by a long
+tone as shown via the circuit on the left. This circuit can be found in
+"27MHz Links" Page 2.
+
+![latching-Relay-6](images/latching-Relay-6.png)
+
+The following circuit will come ON in either SET or RESET state,
+depending on the state of the armature in the relay.
+
+![latching-Relay-7](images/latching-Relay-7.png)
+
+If it comes ON in RESET state, the 2k2 on the SET coil will charge the 22u
+electrolytic so that when the switch is pressed, the 22u will activate the SET
+coil and change the state of the relay. The opposite 22u will not get charged
+and when the switch is pressed after a few seconds, relay will change state.
+
+The relay is SY4060 from Jarcar Electronics.
+
+## LATCH - ELECTRONIC LATCH - LATCH A SIGNAL
+
+![Latch-Ccts](images/Latch-Ccts.png)
+
+When the circuit sees a voltage about 1v or higher, the circuit latches ON and
+illuminates the LED or relay. The third circuit provides SET and RESET. The
+fourth circuit provides SET and RESET via a bi-stable arrangement.
+
+## LATCHING A PUSH BUTTON - also called: PUSH-ON PUSH-OFF
+
+![LatchingPushButton](images/LatchingPushButton.png)
+
+When the circuit is turned on, capacitor C1 charges via the two 470k resistors.
+When the switch is pressed, the voltage on C1 is passed to Q3 to turn it on.
+This turns on Q1 and the voltage developed across R7 will keep Q1 turned on
+when the button is released.
+
+Q2 is also turned on during this time and it discharges the capacitor. When
+the switch is pressed again, the capacitor is in a discharged state and this
+zero voltage will be passed to Q3 turn it off. This turns off Q1 and Q2 and
+the capacitor begins to charge again to repeat the cycle.
+
+## TOGGLE A PUSH BUTTON - using 2 relays
+
+![ToggleRelay](images/ToggleRelay.png)
+
+The circuit is shown with the second relay "active."
+
+Half of each relay is used for the toggle function and the other half can
+be connected to an application.
+
+The first relay (which is off), applies voltage from its contacts and
+latches the second relay “on”. The condition changes when the switch
+is pressed. Voltage is applied to the first relay, latching it “on.”
+Releasing the switch turns the second relay “off”.
+
+When the switch is pressed again, 12v is applied to both ends of the first
+relay and it turns off. The second relay turns “on” when the switch
+is released. There is slight lag in the action, depending on how long the
+switch is pressed.
+
+## TOGGLE A RELAY
+
+![ToggleArelay](images/ToggleArelay.png)
+
+This circuit will activate a relay when the switch is
+pressed and released quickly and turn the relay off when the switch is
+pressed for about 1 second then released.
+
+The circuit relies on a few component values to operate correctly and they
+may need to be adjusted to get the circuit to operate exactly as required.
+
+When the switch is pressed, The BC557 turns ON and supplies nearly rail
+voltage to the relay.
+
+This closes the contacts and the BC547 is capable of delivering a current
+to the relay.
+
+The transistor acts just like a resistor with a resistance equal to 1/250
+the value of the base resistor. This is 40 ohms. If the relay has a coil
+resistance of 250 ohms, it will see a voltage of about 10v for a 12v supply.
+
+When the switch is released, the BC547 keeps the relay energised.
+
+During this activation, the 220u electrolytic helps in activating the relay.
+
+Here's how: Initially the 220u is charged (quite slowly) via the 10k resistor
+68 ohm resistor and the coil of the relay.
+
+It is now fully charged and when the switch is pressed, the negative end
+of the electrolytic is raised via the collector of the BC557. The positive
+end rises too and this action raises the emitter and when the relay contacts
+close, the relay is delivered current fro both the BC557 and and BC547. When
+the sw is released, the BC547 takes over and the discharging of the 220u
+into the base, holds the relay closed.
+
+As the 220u gradually discharges, the ability of the BC547 to deliver current
+reduces slightly and the 10k base resistor takes over and turns the transistor
+into a 40R resistor.  Finally the 220u has a very small voltage across it.
+
+When the switch is pressed again, the BC547 acts as a resistor with a
+resistance less than 40 ohms and it is able to deliver a voltage slightly
+higher than that provided by the BC547.
+
+This slightly higher voltage is passed to the negative lead of the 220u and
+the positive lead actually rises about rail voltage and the electro gets
+discharged via the 10k resistor.
+
+When the switch is released, the electro has less than 0.6v across it and
+the BC547 transistor is not able to deliver current to the relay. The relay
+is de-activated.
+
+## REVERSING A MOTOR - 1
+
+There are a number of ways to reverse a motor. The following diagrams show how
+to connect a double-pole double throw relay or switch and a set of 4 push
+buttons. The two buttons must be pushed at the same time or two double pole
+push-switches can be used.
+
+See H-Bridge below for more ways to reverse a motor.
+
+![ReversingRelay](images/ReversingRelay.png)
+
+Adding limit switches:
+
+![ReversinRelayAndSwitch](images/ReversingRelay_and_Switch.png)
+
+The way the dpdt relay circuit (above) works is this: The relay is powered by
+say 12v, via a MAIN SWITCH. When the relay is activated, the motor travels in
+the forward direction and hits the "up limit" switch. The motor stops. When the
+MAIN SWITCH is turned off, the relay is de-activated and reverses the motor
+until it reaches th e "down-limit" switch and stops. The MAIN SWITCH must be
+used to send the motor to the "up limit" switch.
+
+## REVERSING A MOTOR-2
+
+### AUTOMATIC FORWARD-REVERSE
+
+The following circuit allows a motor (such as a train) to travel in the forward
+direction until it hits the "up limit" switch. This sends a pulse to the
+latching relay to reverse the motor (and ends the short pulse). The train
+travels to the "down limit" switch and reverses.
+
+![Reversing-A-Motor](images/Reversing-A-Motor.png)
+
+If the motor can be used to click a switch or move a slide switch, the
+following circuit can be used:
+
+![Reversing-A-Motor-2](images/Reversing-A-Motor-2.png)
+
+## REVERSING A MOTOR-3
+
+If the train cannot physically click the slide switch in both directions, via a
+linkage, the following circuit should be used:
+
+![Reversing-A-Motor-3](images/Reversing-A-Motor-3.png)
+
+When power is applied, the relay is not energised and the train must travel
+towards the "up limit." The switch is pressed and the relay is energised. The
+Normally Open contacts of the relay will close and this will keep the relay
+energised and reverse the train. When the down limit is pressed, the relay is
+de-energised.
+
+If you cannot get a triple-pole change-over relay, use the following circuit:
+
+![Reversing-A-Motor-4](images/Reversing-A-Motor-4.png)
+
+## AUTOMATIC BLINDS
+
+![AutomaticBlinds](images/AutomaticBlinds.jpg)
+
+![AutomaticBlindsCct](images/AutomaticBlindsCct.png)
+
+This circuit can be used for anything that needs to be automatically opened or
+closed via a MAINS TIMER.
+
+Normally the Timer turns on a lamp. Our circuit uses a Wall Wart in the Mains
+Timer socket and the 12v "Plug Pack" activates a 12v relay.
+
+The relay sends (say) positive out the top lead and when the top limit switch
+is opened by the motor reaching the end of its travel, it stops. The top 1N5404
+prevents current passing to the motor. At 5PM the Mains timer turns the relay
+OFF and it sends negative out the top lead. The top 3 amp diode allows the
+motor to reverse and then the limit switch closes. When it reaches the lower
+limit switch, the switch opens and the lower diode prevents current flowing to
+the motor.
+
+## BATTERY MONITOR MkI
+
+![BatteryMonitor](images/BatteryMonitor.png)
+
+A very simple battery monitor can be made with a dual-colour LED and a
+few surrounding components. The LED produces orange when the red and green
+LEDs are illuminated.
+
+The following circuit turns on the red LED below 10.5v The orange LED
+illuminates between 10.5v and 11.6v.
+
+The green LED illuminates above 11.6v
+
+## BATTERY MONITOR for 6v
+
+![BatteryMonitor-6v](images/BatteryMonitor-6v.png)
+
+The following circuit monitors a single Li-ION cell. The green LED illuminates
+when the voltage is above 3.5v and the goes out when the voltage falls below
+3.4v. The red LED then illuminates.
+
+![BatteryMonitor-Ccts](images/BatteryMonitor-Ccts.png)
+
+Adjust the 560k for the voltage at which the LED turns ON. No current-limiting
+resistor is needed as the transistor only allows a few milliamp collector
+curent.
+
+## BATTERY MONITOR MkII
+
+![BatteryMonitorMkII](images/BatteryMonitorMkII.png)
+
+This battery monitor circuit uses 3 separate LEDs. The red LED turns on from 6v
+to below 11v. It turns off above 11v and The orange LED illuminates between 11v
+and 13v. It turns off above 13v; the green LED illuminates above 13v.
+
+## LOW FUEL INDICATOR
+
+![Fuel-Detect](images/Fuel-Detect.png)
+
+The first circuit has been designed from a request by a reader. He wanted a low
+fuel indicator for his motorbike. The LED illuminates when the fuel gauge is 90
+ohms. The tank is empty at 135 ohms and full at zero ohms. To adapt the circuit
+for an 80 ohm fuel sender, simply reduce the 330R to 150R. (The first thing you
+have to do is measure the resistance of the sender when the tank is amply.)
+
+The second circuit uses a power transistor to drive a lamp.
+
+![LowFuel](images/LowFuel.png)
+
+### HIGH FUEL INDICATOR
+
+![HighFuel](images/HighFuel.png)
+
+These circuits illuminates a lamp when the fuel has nearly filled the tank. It
+could also activate an alarm:
+
+![HighFuel-2](images/HighFuel-2.png)
+
+Relay DROPS OUT when the output voltage of the fuel sender is about 0.8v.
+
+## QUIZ TIMER
+
+![QuizTimer](images/QuizTimer.png)
+
+This circuit can be used to indicate: "fastest finger first." It has a globe
+for each contestant and one for the Quiz Master.
+
+When a button is pressed the corresponding globe is illuminated.
+
+The Quiz Master globe is also illuminated and the cathode of the 9v1 zener
+sees approx mid-rail voltage. The zener comes out of conduction and no
+voltage appears across the 120R resistor. No other globes can be lit until
+the circuit is reset.
+
+## TRACKING TRANSMITTER
+
+![TrackingTransmitterMkI](images/TrackingTransmitterMkI.png)
+
+This circuit can be used to track lots of items. It has a range of 200 - 400
+metres depending on the terrain and the flashing LED turns the circuit ON when
+it flashes. The circuit consumes 5mA when producing a carrier (silence) and
+less than 1mA when off (background snow is detected).
+
+## BIKE TURNING SIGNAL
+
+![bikeLeftCct](images/bikeLeftCct.png)
+
+This circuit can be used to indicate left and right turn on a motor-bike. Two
+identical circuits will be needed, one for left and one for right.
+
+## PHONE TAPE 3
+
+![PhoneTape-3](images/PhoneTape-3.png)
+
+This circuit can be used to turn on a tape recorder when the phone line voltage
+is less than 15v. This is the approximate voltage when the handset is picked
+up. See Phone Tape-1 and Phone Tape-2 in 200 Transistor Circuits eBook
+(circuits 1 - 100). When the line voltage is above 25v, the BC547 is turned on
+and this robs the base of the second BC547 of the 1.2v it needs to turn on.
+
+When the line voltage drops, the first BC547 turns off and the 10u charges via
+the 47k and gradually the second BC547 is turned on. This action turns on the
+BC338 and the resistance between its collector-emitter leads reduces. Two leads
+are taken from the BC338 to the "rem" (remote) socket on a tape recorder. When
+the lead is plugged into a tape recorder, the motor will stop. If the motor
+does not stop, a second remote lead has been included with the wires connected
+the opposite way. This lead will work. The audio for the tape recorder is
+also shown on the diagram. This circuit has the advantage that it does not
+need a battery. It will work on a 30v phone line as well as a 50v phone line.
+
+## PHONE TAPE 4
+
+![PhoneTape-4](images/PhoneTape-4.png)
+
+This circuit is identical in operation to the circuit above
+but uses FET's (Field Effect Transistors.  15v zeners are used to prevent
+the gate of each FET from rising above 15v.
+
+A FET has two advantages over a transistor in this type of circuit.
+
+1. It takes very little current into the gate to turn it on. This means the
+   gate resistor can be very high.
+2. The voltage developed across the output
+   of a FET is very low when the FET is turned on. This means the motor in the
+   tape recorder will operate at full strength.
+
+This circuit has not been tested and the 10k resistor (in series with the
+first 15v zener) creates a low impedance and the circuit may not work on
+some phone systems.
+
+## SEQUENCER
+
+![5554017Anim](images/5554017Anim-0.png)
+
+This circuit has been requested by a reader. He wanted to have a display on his
+jacket that ran 9 LEDs then stopped for 3 seconds. Note the delay produced by
+the 100u and 10k produces 3 seconds by the transistor inhibiting the 555
+(taking pin 6 LOW). Learn more about the 555 - see the article: "The 555" on
+Talking Electronics website by clicking the title on the left index. See the
+article on CD 4017. See "Chip Data eBook" on TE website in the left index.
+
+## H-BRIDGE
+
+These circuits reverse a motor via two input lines. Both inputs must not be LOW
+with the first H-bridge circuit. If both inputs go LOW at the same time, the
+transistors will "short-out" the supply. This means you need to control the
+timing of the inputs. In addition, the current capability of some H-bridges is
+limited by the transistor types.
+
+![H-Bridge-1](images/H-Bridge-1.png)
+
+![H-Bridge-2](images/H-Bridge-2.png)
+
+![H-Bridge-3](images/H-Bridge-3.png)
+
+
+The driver transistors are in "emitter follower" mode in this circuit.
+
+
+<!--full-->![H-BridgePhoto](images/H-BridgePhoto.jpg)
+<!--full-->
+<!--full-->Two H-Bridges on a PC board
+
+H-Bridge using Darlington transistors:
+
+![H-Bridge-4](images/H-Bridge-4.png)
+
+## TOUCH-ON TOUCH-OFF SWITCH
+
+![TouchON-TouchOFF](images/TouchON-TouchOFF.png)
+
+This circuit will create a HIGH on the output
+when the Touch Plate is touched briefly and produce a low when the plate is
+touched again for a slightly longer period of time. Most touch switches rely
+on 50Hz mains hum and do not work when the hum is not present. This circuit
+does not rely on "hum."
+
+## SIMPLE TOUCH-ON TOUCH-OFF SWITCH
+
+![TouchON-TouchOFF-2](images/TouchON-TouchOFF-2.png)
+
+This circuit will create a HIGH on the output when the Touch Plate is touched
+briefly and produce a low when the plate is touched again.
+
+## SHAKE TIC TAC LED TORCH
+
+![ShakeTicTacLEDtorch](images/ShakeTicTacLEDtorch.png)
+
+In the diagram, it looks like the coils sit on the “table” while the magnet has
+its edge on the table. This is just a diagram to show how the parts are
+connected. The coils actually sit flat against the slide (against the side of
+the magnet) as shown in the diagram: The output voltage depends on how quickly
+the magnet passes from one end of the slide to the other. That's why a rapid
+shaking produces a higher voltage. You must get the end of the magnet to fully
+pass though the coil so the voltage will be a maximum. That’s why the slide
+extends past the coils at the top and bottom of the diagram.
+
+The circuit consists of two 600-turn coils in series, driving a voltage
+doubler. Each coil produces a positive and negative pulse, each time the magnet
+passes from one end of the slide to the other.
+
+The positive pulse charges the top electrolytic via the top diode and the
+negative pulse charges the lower electrolytic, via the lower diode.
+
+The voltage across each electrolytic is combined to produce a voltage for the
+white LED. When the combined voltage is greater than 3.2v, the LED illuminates.
+The electrolytics help to keep the LED illuminated while the magnet starts to
+make another pass.
+
+## FADING LED
+
+![FadingLED](images/FadingLED.png)
+
+The circuit fades the LED ON and OFF at an equal rate. The 470k charging and
+47k discharging resistors have been chosen to create equal on and off times.
+
+## MAINS NIGHT LIGHT
+
+![LEDNightLight](images/LEDNightLight.png)
+
+The circuit illuminates a column of 10 white LEDs. The 10u prevents flicker and
+the 100R also reduces flicker.
+
+## RANDOM BLINKING LEDS
+
+![LED-Blinker](images/LED-Blinker.png)
+
+This circuit blinks a set of LEDs in a random pattern according to the slight
+differences in the three Schmitt Trigger oscillators. The CD4511 is BCD to
+7-segment Driver
+
+## HEX BUG
+
+![HexBug-Cct](images/HexBug-Cct.png)
+
+This is the circuit from a HEX BUG. It is a surface-mount bug
+with 6 legs. The pager motor is driven by an H-Bridge and "walks" to a wall
+where a feeler (consisting of a spring with a stiff wire down the middle)
+causes the motor to reverse.
+
+In the forward direction, both sets of legs are driven by the compound
+gearbox but when the motor is reversed, the left legs do not operate as they
+are connected by a clutch consisting of a spring-loaded inclined plane that
+does not operate in reverse.
+
+This causes the bug to turn around slightly.
+
+The circuit also responds to a loud clap. The photo shows the 9 transistors
+and accompanying components:
+
+<!--full-->![HexBugPic-1](images/HexBugPic-1.jpg)
+<!--full-->
+<!--full-->Inclined Dog Clutch.
+<!--full-->
+<!--full-->![InclinedDogClutch](images/InclinedDogClutch.png)
+
+### GEARBOX
+
+Hex Bug gearbox consists of a compound gearbox with output "K" (eccentric pin)
+driving the legs. You will need to see the project to understand how the legs
+operate.
+
+<!--full-->![HexBugGearbox](images/HexBug-Gearbox.png)
+<!--full-->
+
+When the motor is reversed, the clutch "F" is a housing that is spring-loaded
+to "H" and drives "H via a square shaft "G". Gearwheel "C" is an idler and the
+centre of "F" is connected to "E" via the shaft. When "E" reverses, the centre
+of "F" consists of a driving inclined plane and pushes "F" towards "H" in a
+clicking motion. Thus only the right legs reverse and the bug makes a turn.
+When "E" is driven in the normal direction, the centre of "F" drives the outer
+casing "F" via an action called an "Inclined Dog Clutch" and "F" drives "G" via
+a square shaft and "G" drives "H" and "J" is an eccentric pin to drive the
+legs.  The drawing of an Inclined Dog Clutch shows how the clutch drives in
+only one direction. In the reverse direction it rides up on the ramp and
+"clicks" once per revolution. The spring "G" in the photo keeps the two halves
+together.  See Ladybug Robot in "100 IC Circuits" for an op-amp version of this
+project.
+
+## PWM CONTROLLER
+
+![PWM-Controller-2](images/PWM-Controller-2.png)
+
+This 555 based PWM controller features almost 0% to 100% pulse width regulation
+using the 100k variable resistor, while keeping the oscillator frequency
+relatively stable. The frequency is dependent on the 100k pot and 100n to give
+a frequency range from about 170Hz to 200Hz.
+
+## LIMIT SWITCHES
+
+![LimitSw](images/LimitSw.png)
+
+This circuit detects when the water level is low and
+activates solenoid (or pump) 1 for 5 minutes (adjustable) to allow dirty
+water to be diverted, before filling the tank via solenoid 2.
+
+## WAILING SIREN
+
+![Siren](images/Siren.png)
+
+This circuit produces a penetrating (deafening) up/down
+siren sound.
+
+## MODEL RAILWAY TIME
+
+![ModelRailwayTime](images/ModelRailwayTime.png)
+
+Here is a simpler circuit than [MAKE TIME FLY!] from our
+first book of 100 transistor circuits.
+
+For those who enjoy model railways, the ultimate is to have a fast clock
+to match the scale of the layout. This circuit will appear to "make time
+fly" by revolving the seconds hand once every 6 seconds. The timing can be
+adjusted by the electrolytics in the circuit. The electronics in the clock
+is disconnected from the coil and the circuit drives the coil directly. The
+circuit takes a lot more current than the original clock (1,000 times more)
+but this is the only way to do the job without a sophisticated chip.
+
+<!--full-->![ModelRailwayTime](images/ModelRailwayTime.png)
+
+Model Railway Time Circuit Connecting the circuit to the clock coil For those
+who want the circuit to take less current, here is a version using a Hex
+Schmitt Trigger **74c14** chip:
+
+![ModelRailwayTime-2](images/ModelRailwayTime-2.png)
+
+## SLOW START-STOP
+
+![SlowStartStop](images/SlowStartStop.png)
+
+To make a motor start slowly and slow down slowly, this circuit can be used.
+The slide switch controls the action. The Darlington transistor will need a
+heatsink if the motor is loaded.
+
+## CLAP SWITCH
+
+![ClapSwitch](images/ClapSwitch.png)
+
+This circuit toggles the LEDs each time it detects a clap or
+tap or short whistle.
+
+The second 10u is charged via the 5k6 and 33k and when a sound is detected,
+the negative excursion of the waveform takes the positive end of the 10u
+towards the 0v rail. The negative end of the 10u will actually go below 0v
+and this will pull the two 1N4148 diodes so the anode ends will have near
+to zero volts on them.
+
+As the voltage drops, the transistor in the bi-stable circuit that is turned
+on, will have 0.6v on the base while the transistor that is turned off,
+will have zero volts on the base. As the anodes of the two signal diode
+are brought lower, the transistor that is turned on, will begin to turn off
+and the other transistor will begin to turn on via its 100u and 47k. As it
+begins to turn on, the transistor that was originally turned on will get
+less "turn-on" from its 100u and 47k and thus the two switch over very
+quickly. The collector of the third transistor can be taken to a buffer
+transistor to operate a relay or other device.
+
+See a [simple Clap Switch using a CD4017 IC in 100 IC Circuits](http://www.talkingelectronics.com/projects/100%20IC%20Circuits/1-100_IC-Ccts.html)
+
+## INTERCOM
+
+Here is a 2-station intercom using common 8R mini speakers.
+
+![Intercom](images/Intercom.png)
+
+The "press-to-talk" switches should have a spring-return so the intercom can
+never be left ON. The secret to preventing instability (motor-boating) with a
+high gain circuit like this is to power the speaker from a separate power
+supply! You can connect an extra station (or two extra stations) to this
+design.
+
+Request from Kim Edwards:
+
+> Please analyse this circuit for me. The circuit is not normal as it must
+> consume no current when sitting around and either end must be able to call
+> the other end.
+
+Start with the first transistor. It is self-biased with about half rail voltage
+on the collector. The second transistor is self-biased with about 1v on the
+base (via the 220k and 1M). 0.4v across 470R makes about 1v across the 1k
+resistor. The emitter of the BC557 will be about 0.4v lower than supply-rail.
+
+This will produce about 1v p-p output via the speaker.
+
+Increasing the 220k to 470k will increase the volume. The 10u to the speaker
+allows AC signal to enter the amplifier and the 10u on the supply-rail keeps
+the voltage from fluctuating too much as the supply is coming via the speaker.
+The 100u improves the current from the battery when the battery is weak.
+
+## WARNING BEACON
+
+![Beacon-12v](images/Beacon-12v.png)
+
+Here is a 12v Warning Beacon suitable for a car or truck
+break- down on the side of the road. The key to the operation of the circuit
+is the high gain of the Darlington transistors. The circuit must be kept
+"tight" (thick wires) to be sure it will oscillate.
+
+A complete kits of parts and PC board costs $5.00 plus postage from Talking
+Electronics. Email HERE for details.
+
+Here is the modification for 3-5 super-bright LEDs:
+
+![Beacon-12vLEDs](images/Beacon-12vLEDs.png)
+
+Click HERE for LED Turning Indicator project.
+
+## PHASE-SHIFT OSCILLATOR also called SINEWAVE OSCILLATOR
+
+![PhaseShiftOsc-Ccts](images/PhaseShiftOsc-Ccts.png)
+
+These circuits produces a sinewave very nearly equal to rail voltage.
+
+The important feature is the need for the emitter resistor and 10u /47u
+bypass electrolytic. It is a most-important feature of the circuit. It
+provides reliable start-up and guaranteed operation. For 6v operation,
+the 100k is reduced to 47k.  The three 10n capacitors and two 10k resistors
+(actually 3) determine the frequency of operation (700Hz).
+
+The 100k and 10k base-bias resistors can be replaced with 2M2 between base
+and collector.
+
+This type of circuit can be designed to operate from about 10Hz to about
+200kHz.
+
+Both these circuits are NOT VERY RELIABLE. They work with some transistors
+better than others. They stop working when you touch some of the parts. The
+frequency changes when you add a 100u across the power rails. They are too
+fiddly to be recommended. Place a piezo diaphragm across the collector load and
+experiment yourself. Try changing the 1k and try 6v to 12v to see what I mean.
+
+## BLOCKING OSCILLATOR also called FLYBACK OSCILLATOR
+
+![BlockingOscillator](images/BlockingOscillator.png)
+
+The circuit produces high voltage pulses (spikes) of about 40v p-p (when the
+LED is not connected), at a frequency of 200kHz. The super-bright LED on the
+output absorbs the pulses and uses the energy to produce illumination. The
+voltage across the LED will be about 3.6v The winding to the base is connected
+so that it turns the transistor ON harder until it is saturated. At this point
+the flux cannot increase any more and the transistor starts to turn off. The
+collapsing magnetic field in the transformer produces a very high voltage and
+that's why we say the transformer operates in FLYBACK mode.
+
+This type of circuit will operate from 10kHz to a few MHz.
+
+## LOW VOLTAGE FLASHER
+
+![LowVoltageFlasher](images/LowVoltageFlasher.png)
+
+This circuit flashes when the voltage drops to 4v.
+
+The voltage "set-point" can be adjusted by changing the 150k on the base of the
+first transistor.
+
+## POWER ON
+
+![PowerON](images/PowerON.png)
+
+This LED illuminates for a few seconds when the power is turned on. The circuit
+relies on the 47u discharging into the rest of the circuit so that it is
+uncharged when the circuit is turned on again.
+
+## CAR LOOP DETECTOR
+
+![CarLoopDetector](images/CarLoopDetector.png)
+
+A 25cm dia coil (consisting of 40 turns and 12 turns) is placed in the centre
+of a driveway (between two sheets of plastic). When a vehicle is driven over
+the coil, it responds by the waveform collapsing. This occurs because the tank
+circuit made up of the 40 turns is receiving just enough feedback signal from
+the 12 turns to keep it oscillating. When metal is placed near the coil, it
+absorbs some of the electromagnetic waves and the amplitude decreases. This
+reduces the amplitude in the 12 turns and the oscillations collapses. The
+second transistor turns off and the 10k pulls the base of the third transistor
+(an emitter-follower) to the 6v rail and turns on the LED.
+
+## ALARM USING 4-BUTTONS
+
+![Alarm-4Buttons](images/Alarm-4Buttons.png)
+
+To open the lock, buttons S1, S2, S3, and S4 must
+be pressed in this order. They must be pressed for more than 0.7 seconds
+and less than 1.3 seconds.
+
+Reset button S5 and disable button S6 are also included with the other
+buttons and if the disable button is pressed, the circuit will not accept
+any code for 60 seconds. Each of the 3v3 zeners can be replaced with two red
+LEDs and this will show how you are progressing through the code. Make sure
+the LEDs are not visible to other users.
+
+## AUDIO AMPLIFIER (mini)
+
+![AudioAmpmini](images/AudioAmpmini.png)
+
+This project is called "mini" because its size is small and the output is
+small.
+
+It uses surface mount technology.
+
+### HOW THE CIRCUIT WORKS
+
+The output is push-pull and consumes less than 3mA
+(with no signal) but drives the earpiece to a very loud level when audio
+is detected.
+
+The whole circuit is DC coupled and this makes it extremely difficult to
+set up.
+
+Basically you don't know where to start with the biasing. The two most
+critical components are 8k2 between the emitter of the first transistor and
+0v rail and the 470R resistor.
+
+The 8k2 across the 47u sets the emitter voltage on the BC 547 and this
+turns it on. The collector is directly connected to the base of a BC 557,
+called the driver transistor. Both these transistors are now turned on and
+the output of the BC 557 causes current to flow through the 1k and 470R
+resistors so that the voltage developed across each resistor turns on the
+two output transistors. The end result is mid-rail voltage on the join of
+the two emitters.
+
+The 8k2 feedback resistor provides major negative feedback while the 330p
+prevents high-frequency oscillations occurring.
+
+## CAPACITOR DISCHARGE UNIT MkII (CDU2)
+
+![CDU 2](images/CDU2_Cct.png)
+
+This project is available as a kit for $10.80 plus $6.50 post; email [Talking
+Electronics](mailto:talking@tpg.com.au) for details.
+
+![CDU 2](images/CDU2.png)
+
+This circuit will operate a two-solenoid point-motor and prevent it overheating
+and causing any damage. The circuit produces energy to change the points and
+ceases to provide any more current. This is carried out by the switching
+arrangement within the circuit, by sampling the output voltage.
+
+If you want to control the points with a DPDT toggle switch or slide switch,
+you will need two CDU2 units.
+
+### HOW THE CIRCUIT WORKS
+
+![CDU 2-a](images/CDU2-a.png)
+
+The circuit is supplied by 16v AC or DC and the diode
+on the input is used to rectify the voltage if AC is supplied. If nothing
+is connected to the output, the base of the BD679 is pulled high and the
+emitter follows. This is called an emitter-follower stage. The two 1,000u
+electrolytics charge and the indicator LED turns on. The circuit is now ready.
+
+![CDU 2-b](images/CDU2-b.png)
+
+When the Main or Siding switch is pressed, the energy from the electrolytics
+is passed to the point motor and the points change. As the output voltage
+drops, the emitter-follower transistor is turned off and when the switch is
+released, the electrolytics start to charge again.  The point-motor can be
+operated via a Double-Pole Double-Throw Centre-Off toggle switch, providing
+the switch is returned to the centre position after a few seconds so that
+the CDU unit can charge-up.
+
+## CAPACITOR DISCHARGE UNIT MkII (CDU2) - modification
+
+![CDU 2-Mods](images/CDU2-Mods.png)
+
+If your ransformer does not supply 15vAC to 16vAC, you can increase the input
+voltage by adding a 100u to 220u electrolytic and 1N4004 diode to the input to
+create a voltage doubling arrangement. You can also change one or both the
+1,000u electrolytics for 2,200u. This will deliver a much larger pulse to the
+point-motor and guarantee operation.
+
+## PHONE BUG
+
+![TelephoneBug-3Cct](images/TelephoneBug-3Cct.png)
+
+see also [PHONE TRANSMITTER A] and [PHONE TRANSMITTER B] projects from the
+first part.
+
+![TelephoneBug-3](images/TelephoneBug-3.png)
+
+This circuit connects to a normal phone line and when the voltage drops to less
+than 15v, the first transistor is turned off and enables the second transistor
+to oscillate at approx 100MHz and transmit the phone conversation to a nearby
+FM radio. The transistors must be 65v devices. Do not use BC547.
+
+## CODE LOCK
+
+![CodeLock](images/CodeLock.png)
+
+This circuit turns on a relay when the correct code is entered
+on the 8-way DIP switches. Two different types of DIP switches are shown.
+Keep the top switch off and no current will be drawn by the circuit.
+
+There are 256 different combinations and because the combination is in binary,
+it would be very difficult for a burglar to keep up with the settings of
+the switches.
+
+## LEDS SHOW RELAY STATE
+
+![LEDsForRelay](images/LEDsForRelay.png)
+
+The green LED indicates the relay is not energised
+and the red LED shows the relay is energised.
+
+## VOLTAGE MULTIPLIERS
+
+![VoltageMultipliers](images/VoltageMultipliers.png)
+
+The first circuit takes a square wave (any amplitude) and doubles it - minus
+about 2v losses in the diodes and base-emitter of the transistors.
+
+The second circuit must rise to at least 5.6v and fall to nearly 0.4v for the
+circuit to work. Also the rise and fall times must be very fast to prevent
+both transistors coming on at the same time and short-circuiting.
+
+The third circuit doubles an AC voltage. The AC voltage rises "V" volts
+above the 0v rail and "V" volts below the 0v rail.
+
+## VOLTAGE DOUBLER
+
+![VoltageDoubler](images/VoltageDoubler.png)
+
+This is a voltage doubler circuit from a bicycle dynamo design found on the
+web. The dynamo produces 6v AC and charges a 3.3FARAD super cap via 2 diodes
+and an electrolytic. As you will see, C2, D3 and D4 are not needed and can be
+removed.
+
+This is how the circuit works.  The voltage at the mid point of diodes D1 and
+D2 can fall to -0.6v and rise to rail voltage plus 0.6v without any current
+being supplied from the dynamo.  When the voltage rises more than 0.6v above
+rail voltage, the dynamo needs to deliver current and this will allow the rail
+voltage to increase. We start with the dynamo producing negative from the left
+side and positive on the right side.
+
+The left side will fall to -0.6v below the 0v rail and the right side will
+charge C1 and C2 will simply rise in exactly the same manner as we described
+the left side of the dynamo being able to rise.
+
+Suppose C1 charges to about 7v (which it will be able to do after a few
+cycles). The voltage from the dynamo now reverses and the left side is
+positive and the right side is negative. The right side is already sitting
+at a potential of 7v (via C1) and as the left side increases, it raises the
+rail voltage higher by an amount that could be as high as 7v minus 0.6v.
+
+The actual rail voltage will not be as high as this as the 3.3 Farad capacitor
+will be charging, but if energy is not taken from the circuit it will rise
+to nearly 14v or even higher according to the peak voltage delivered by
+the dynamo.  When the dynamo is delivering energy to the positive rail,
+it is "pushing down" on the C1 and some of its stored energy is also
+delivered. This means it will have a lower voltage across it when the next
+cycle comes around. C2, D3 and D4 are not needed and can be removed. In fact,
+C1 will always have rail voltage on it due to the 47 resistor, so the voltage
+doubling will start as soon as the dynamo operates.
+
+### DYNAMO VOLTAGE DOUBLER
+
+Here is a simple circuit to increase the voltage
+from a BICYCLE DYNAMO (or HAND CRANKED GENERATOR that has a spinning magnet -
+NOT a DC motor) and change the AC voltage it produces, to DC, and charge a
+small battery:
+
+![BicycleDynamoDoubler](images/BicycleDynamoDoubler.png)
+
+### BATTERY-CHARGER DOUBLER
+
+This circuit will charge a battery from an AC source where the AC voltage is
+too low to charge the battery.
+
+![DoublerBattery-Charger](images/DoublerBattery-Charger.png)
+
+This circuit increases the voltage and rectifies it to produce pulsing DC. The
+100u electrolytic limits the current and can be increased to 1,000u to provide
+a higher current.
+
+Even though the voltage will be increased to about twice the previous voltage,
+this will not affect the battery as the important quantity is CURRENT and TIME.
+You need to monitor the battery and determine when it is fully charged.
+
+## ADJUSTABLE HIGH CURRENT REGULATED POWER SUPPLY
+
+![5A-AdjustableSupply](images/5A-AdjustableSupply.png)
+
+There are two ways to add a 2N3055 (TIP3055) as the pass transistor for a high
+current power supply. This is handy as most hobbyists will have one of these in
+their parts box. RL must be low enough to guarantee at least a 30mA. It can be
+a separate resistor or part of the actual load.
+
+## INDUCTIVELY COUPLED POWER SUPPLY
+
+![InductivePowerSupply](images/InductivePowerSupply.png)
+
+This circuit is from an Interplak Model PB-12 electric toothbrush.
+
+A coil in the charging base (always plugged in and on) couples to a
+mating coil in the hand unit to form a step down transformer. The MPSA44
+transistor is used as an oscillator at about 60 kHz which results in much
+more efficient energy transfer via the air core coupling than if the system
+were run at 50 or 60Hz. The amplitude of the oscillations varies with the
+full wave rectified 100Hz or 120Hz unfiltered DC.
+
+The battery charger is nothing more than a diode to rectify the signal from
+the 120 turn coil in the charging base. Thus the battery is in constant
+trickle charge as long as the hand unit is in the base. The battery pack is
+a pair of 600mAhr AA NiCd cells.
+
+## POWERING A LED
+
+![Drive-A-LED](images/Drive_A_LED.png)
+
+Sometimes the output of a gate does not have sufficient current to illuminate a
+LED to full brightness.
+
+Here are two circuits. The circuits illuminate the LED when the output signal
+is HIGH. Both circuits operate the same and have the same effect on loading the
+output of the gate.
+
+## NiCd BATTERY CHARGER
+
+![NiCd-Charger](images/NiCd_Charger.png)
+
+This NiCd battery charger can charge up to 8 NiCd cells connected in series.
+This number can be increased if the power supply is increased by 1.65v for each
+additional cell. If the BD679 is mounted on a good heatsink, the input voltage
+can be increased to a maximum of 25v. The circuit does not discharge the
+battery if the charger is disconnected from the power supply.
+
+Usually NiCd cells must be charged at the 14 hour rate. This is a charging
+current of 10% of the capacity of the cell for 14 hours. This applies to a
+nearly flat cell. For example, a 600 mAh cell is charged at 60mA for 14 hours.
+If the charging current is too high it will damage the cell. The level of
+charging current is controlled by the 1k pot from 0mA to 600mA. The BC557 is
+turned on when NiCd cells are connected with the right polarity. If you cannot
+obtain a BD679, replace it with any NPN medium power Darlington transistor
+having a minimum voltage of 30v and a current capability of 2A. By lowering the
+value of the 1 ohm resistor to 0.5 ohm, the maximum output current can be
+increased to 1A.
+
+## CRYSTAL TESTER
+
+This circuit will test crystals from 1MHz to 30MHz.
+
+![XtalTester](images/XtalTester.png)
+
+When the crystal oscillates, the output will pass through the 1n capacitor to
+the two diodes. These will charge the 4n7 and turn on the second transistor.
+This will cause the LED to illuminate.
+
+## LOW VOLTAGE CUT-OUT
+
+![LowV-cutout](images/LowV-cutout.png)
+
+This circuit will detect when the voltage of a 12v battery reaches a low level.
+This is to prevent deep-discharge or maybe to prevent a vehicle battery
+becoming discharged to a point where it will not start a vehicle. This circuit
+is different to anything previously presented. It has HYSTERESIS. Hysteresis is
+a feature where the upper and lower detection-points are separated by a gap.
+
+Normally, the circuit will deactivate the relay when the voltage is 10v and
+when the load is removed. The battery voltage will rise slightly by as little
+as 50mV and turn the circuit ON again. This is called "Hunting." The off/on
+timing has been reduced by adding the 100u. But to prevent this totally from
+occurring, a 10R to 47R is placed in the emitter lead. The circuit will turn
+off at 10v but will not turn back on until 10.6v when a 33R is in the emitter.
+The value of this resistor and the turn-on and turn-off voltages will also
+depend on the resistance of the relay.
+
+## THE DARLINGTON TRANSISTOR
+
+Normally a single transistor-stage produces a gain of about 100.
+
+If you require a very high gain, two stages can be used. Two transistors can be
+connected connected in many ways and the simplest is DIRECT COUPLING. This is
+shown in the circuit below. An even simpler method is to combine two
+transistors in one package to form a single transistor with very high gain,
+called DARLINGTON TRANSISTOR.
+
+These are available as:
+
+- BD679 NPN-Darlington
+- 2N6284 NPN-Darlington
+- BC879 NPN-Darlington
+- BC880 PNP-Darlington
+- TIP122 NPN-Darlington
+- TIP127 PNP-Darlington
+
+These devices consist of two NPN or PNP transistors but the same result can be
+obtained by using a PNP/NPN pair. This is called a Sziklai pair. This
+arrangement will have to be created with two separate transistors.
+
+The Darlington transistor can also be referred to as: "Super Transistor, Super
+Alpha Pair, Sziklai pair, Complementary Pair, Darlington transistors have a
+gain of 1,000 to 30,000. When the gain is 1,000:1 an input of 1mA will produce
+a current of 1 amp in the collector-emitter circuit.  The only disadvantage of
+a Darlington Transistor is the minimum voltage between collector-emitter when
+fully saturated. It is 0.6v to 1.5v depending on the current through the
+transistor.
+
+A normal transistor has a collector-emitter voltage (when saturated) of 0.2v to
+0.5v. The higher voltage means the transistor will heat up more and requires
+good heatsinking. In addition, a Darlington transistor needs 1.2v between base
+and emitter before it will turn on. A Sziklai pair only requires 0.6v for it to
+turn on.
+
+![DarlingtonTransistors](images/DarlingtonTransistors.png)
+
+## PIC PROGRAMMER
+
+The simplest programmer to program PIC chips is connected
+to your computer via the serial port. This is a 9-pin plug/socket arrangement
+called a SUB-D9 with the male plug on the computer and female on a lead that
+plugs into the computer.
+
+The signals that normally appear on the pins are primary designed to talk to a
+modem but we use the voltages and the voltage-levels to power a programmer. The
+voltages on the pins are On or Off. On (binary value "1") means the pin is
+between -3 and -25 volts, while Off (binary value "0") means it is between
++3 and +25 volts, depending on the computer. But many serial ports produce
+voltages of only +8v and -8V and the programmer circuit uses this to produce
+a voltage of about 13.5v to put the PIC chip into programming mode. This
+is the minimum voltage for the programmer to work. Any computers with a
+lower voltage cannot be used. That's why the circuit looks so unusual. It
+is combining voltages to produce 13v5.  Here are two circuits.
+
+The first circuit is used in our [PIC PROGRAMMER - 12 parts project](http://www.talkingelectronics.com/projects/Pic%20ProgrammerMkV%2012%20Parts/PicProgrammer-12Parts.html).
+
+Circuit 2 uses more components to produce the same result and circuit 3 uses
+less components.
+
+![PicProgrammer12Parts](images/PicProgrammer12Parts.png)
+
+![PicProgrammer-2](images/PicProgrammer-2.png)
+
+![PicProgrammer-3](images/PicProgrammer-3.png)
+
+## FLUORESCENT INVERTER
+
+The simple circuit will drive up to two 20watt fluoro tubes from a 12v supply.
+
+![Fluoro-Inv-a](images/Fluoro_Inv-a.png)
+
+The circuit also has a brightness adjustment to reduce the current from the
+battery. See Fluorescent Inverter article for more details.
+
+### 5-WATT CFL DRIVER
+
+![CFL-Driver-2](images/CFL-Driver-2.png)
+
+Both circuits are almost identical and this circuit has the brightness section
+removed and the 100u removed. The removal of the 100u reduces the brightness
+but it also reduces the current from 500mA to 250mA to make a very efficient
+circuit for an emergency situation.
+
+Note: Driving a 20 watt tube (normal 2-foot tube) produces much-more
+illumination than a 5 watt CFL.
+
+<!--full-->![DriveCFL-sm](images/DriveCFL-sm.jpg)
+
+This circuit will drive a 5watt CFL tube from an old CFL lamp from 6v or
+12v. It makes a very handy emergency light.
+
+The transformer is made by winding 500 turns for the secondary.
+
+This consists of winding about 10 turns on top of each other before advancing
+along the rod. The rod can be round or flat, from an old AM radio. It is
+called a ferrite rod. The 500 turns have to be added before reaching the end
+and this means 100 turns has to take up 1/5th of the distance. This reduces
+the voltage between the turns as the enamel will only withstand 100 volts.
+
+Before you start winding, use at least 3 layers of “sticky-tape” to
+prevent the high voltage shorting to the rod.
+
+The size of the wire is not important and anything 0.25mm or thinner will
+be suitable. After winding the secondary, the primary is 50 turns and the
+feedback is 10 turns.
+
+The primary can be 0.5mm wire and the feedback 0.25mm.
+
+Connect the transistor, components and tube and turn the circuit ON very
+briefly. If the tube does not illuminate immediately, reverse the wires to
+the feedback winding.
+
+The transistor must be 2N 3055 (or the plastic version, TIP 3055). It will
+get warm when illuminating the lamp and needs to be heatsinked. The lamp
+must not be removed as the circuit will overload and damage the transistor.
+
+The circuit takes 250mA when driving a 5 watt CFL (or 18 watt fluorescent
+tube) on 12v supply. The 1k base resistor can be reduced to 820R and the
+brightness will increase slightly but the current will increase to 500mA.
+
+The circuit is more-efficient on 6v. The 1k base resistor is reduced to 220R
+and the transistor remains cool.
+
+## CFL DRIVER
+
+This circuit will drive a 5watt Compact Fluorescent Lamp from 12v:
+
+![CFL-Driver](images/CFL-Driver.png)
+
+## ZAPPER - 160v
+
+This project will give you a REAL SHOCK.
+
+![Zapper-160v](images/Zapper-160v.png)
+
+It produces up to 160v and outputs this voltage for a very short period of
+time. The components are taken from an old CFL (Compact Fluorescent Lamp) as
+the transistors are high voltage types and the 1u5 electro @400v can also be
+taken from the CFL as well as the ferrite core for the transformer.
+
+The CFL has a 1.5mH choke with a DC resistance of 4 ohms. This resistance is
+too low for our circuit and the wire is removed and the core rewound with 50
+turns for the feedback winding and 300 turns of 0.1mm wire to produce a winding
+with a resistance of about 10 ohms for the primary.
+
+The oscillator is "flyback" design that produces spikes of about 160v and these
+are fed to a high-speed diode (two 1N4148 diodes in series) to charge a 1u5
+electrolytic to about 160v. If you put your fingers across the electrolytic you
+will hardly feel the voltage. You might get a very tiny tingle at the end of
+your fingers.  But if this voltage is delivered, then turned off, you get an
+enormous shock and you pull yours fingers off the touch pads.
+
+That's what the other part of the circuit does. It turns on a high-voltage
+transistor for a very short period of time and this is what makes the circuit
+so effective.
+
+## TELEPHONE AMPLIFIER
+
+This amplifier circuit is used in all home telephones to amplify the signal
+from the line to the earpiece.
+
+![Telephone-Amplifier](images/Telephone-Amplifier.png)
+
+The voltage is taken from the line via a bridge that delivers a positive rail,
+no matter how the phone wires are connected.
+
+A transformer is used to pick off a signal from the phone line and this is
+passed through a 22n to the input of the amplifier. Negative feedback is
+provided by a 15k and 1n2 capacitor. The operating point for the amplifier is
+set by the 100k pot and this serves to provide an effect on the gain of the
+amplifier and thus the volume.
+
+## VHF AERIAL AMPLIFIER
+
+![VHF-Amplifier](images/VHF-Amplifier.png)
+
+This amplifier circuit can be used to amplify VHF
+television signals. The gain is between 5dB and 28dB. 300ohm twin feeder
+can be used for the In/Out leads.
+
+## CAR LIGHTS ALERT
+
+![CarLightsAlert](images/CarLightsAlert.png)
+
+This circuit will alert the driver if the lights have been left on. A warning
+sound will be emitted from the 12v buzzer when the driver's door is opened and
+the lights are on.
+
+## HOW A PIEZO BUZZER WORKS
+
+A Piezo Buzzer contains a transistor, coil, and piezo diaphragm and
+produces sound when a voltage is applied. The buzzer in the circuit above
+is a PIEZO BUZZER.
+
+<!--full-->![PiezoBuzzer](images/PiezoBuzzer.jpg)
+
+![PiezoBuzzer](images/PiezoBuzzer.png)
+
+The circuit starts by the base receiving a small current from the 220k
+resistor. This produces a small magnetic flux in the inductor and after a
+very short period of time the current does not increase. This causes the
+magnetic flux to collapse and produce a voltage in the opposite direction
+that is higher than the applied voltage.
+
+3 wires are soldered to pieces of metal on the top and bottom sides of a
+ceramic substrate that expands sideways when it sees a voltage. The voltage on
+the top surface is passed to the small electrode and this positive voltage is
+passed to the base to turn the transistor ON again. This time it is turned ON
+more and eventually the transistor is fully turned ON and the current through
+the inductor is not an INCREASING CURRENT by a STATIONARY CURRENT and once
+again the magnetic flux collapses and produces a very high voltage in the
+opposite direction. This voltage is passed to the piezo diaphragm and causes
+the electrode to "Dish" and produce the characteristic sound. At the same time
+a small amount is "picked-off" and sent to the transistor to create the next
+cycle.
+
+## MAINS DETECTOR
+
+![MainsDetector](images/MainsDetector.png)
+
+This circuit detects the "Active" wire of 110v AC or 240v AC
+via a probe and does not require "continuity." This makes it a safe detector.
+It uses the capacitance of your body to create current flow in the detecting
+part of the circuit and the sensitivity will depend on how you hold the
+insulating case of the project. No components of the circuit must be exposed
+as this will result in ELECTROCUTION.
+
+## SIMPLEST FM BUG
+
+This circuit is the simplest FM circuit you can get.
+
+![SimplestBugCct](images/SimplestBugCct.png)
+
+<!--full-->![SimpleBug-front](images/SimpleBug-front.jpg)
+
+It has no microphone but the coil is so MICROPHONIC that it will pick up noises
+in the room via vibrations on a table.
+
+The circuit does not have any section that determines the frequency. In
+the next circuit and all those that follow, the section that determines
+the frequency of operation is called the TUNED CIRCUIT or TANK CIRCUIT and
+consists of a coil and capacitor. This circuit does not have this feature. The
+transistor turns on via the 47k and this puts a pulse through the 15 turn
+winding. The magnetic flux from this winding passes through the 6 turn
+winding and into the base of the transistor via the 22n capacitor. This
+pulse is amplified by the transistor and the circuit is kept active.
+
+The frequency is determined by the 6 turn coil. By moving the turns together,
+the frequency will decrease. The circuit transmits at 90MHz. It has a very poor
+range and consumes 16mA. The coil is wound on a 3mm drill and uses 0.5mm wire.
+
+## A GOOD ONE-TRANSISTOR CIRCUIT
+
+![1TrBug-a](images/1TrBug-a.png)
+
+This circuit uses a TUNED CIRCUIT or TANK CIRCUIT to create the operating
+frequency. For best performance the circuit should be built on a PC board with
+all components fitted close to each other.
+
+
+<!--full-->The photo below shows the components on a PC board:
+<!--full-->
+<!--full-->![1Tr-FMbug](images/1Tr-FMbug.jpg)
+
+### AN IMPROVED DESIGN
+
+![1TrBugwithSlug](images/1TrBugwithSlug.png)
+
+This design uses a "slug tuned coil" to set the frequency. This means the slug
+can be screwed in and out of the coil. This type of circuit does not offer any
+improvement in stability over the previous circuit. (In later circuits we will
+show how to improve stability. The main way to improve stability is to add a
+"buffer" stage. This separates the oscillator stage from the output.)
+
+The antenna is connected to the collector of the transistor and this "loads"
+the circuit and will cause drift if the bug is touched. The range of this
+circuit is about 200 metres and current consumption is about 7mA. The
+microphone has been separated from the oscillator and this allows the gain
+of the microphone to be set via the 22k resistor. Lowering the resistor
+will make the microphone more sensitive. This circuit is the best you can
+get with one transistor.
+
+### MORE STABILITY
+
+![1TrBugTappedCoil](images/1TrBugTappedCoil.png)
+
+If you want more stability, the antenna can be tapped
+off the top of the tank circuit. This actually does two things. It keeps
+the antenna away from the highly active collector and turns the coil into
+an auto-transformer where the energy from the 8 turns is passed to a single
+turn. This effectively increases the current into the antenna. And that is
+exactly what we want.
+
+The range is not as far but the stability is better. The frequency will not
+drift as much when the bug is held. As the tap is taken towards the collector,
+the output increase but the stability deceases.
+
+## 2-TRANSISTOR CIRCUIT
+
+The next progressive step is to add a transistor
+to give the electret microphone more sensitivity. The electret microphone
+contains a Field Effect Transistor and you can consider it to be a stage of
+amplification. That's why the electret microphone has a very good output.
+
+A further stage of amplification will give the bug extremely good
+sensitivity and you will be able to pick up the sound of a pin dropping on
+a wooden floor.
+
+Many of the 1 transistor circuits over-drive the microphone and this will
+create a noise like bacon and eggs frying. The microphone's used by Talking
+Electronics require a load resistor of 47k for a 6v supply and 22k for
+a 3v supply. The voltage across the microphone is about 300mV to 600mV.
+Only a very simple self-biasing common-emitter stage is needed. This will
+give a gain of approx 70 for a 3v supply. The circuit below shows this audio
+amplifier, added to the previous transmitter circuit. This circuit is the
+best design using 2 transistors on a 3v supply. The circuit takes about 7mA
+and produces a range of about 200 - 400metres.
+
+![2-TrFMTx](images/2-TrFMTx.png)
+
+Five points to note in the circuit above:
+
+1. The tank circuit has a fixed 39p and is adjusted by a 2-10p trimmer. The
+   coil is stretched to get the desired position on the band and the trimmer
+fine tunes the location.
+2. The microphone coupling is a 22n ceramic. This value is sufficient as its
+   capacitive reactance at 3-4kHz is about 4k and the input to the audio stage
+is fairly high, as noted by the 1M on the base.
+3. The 1u between the audio stage and oscillator is needed as the base has a
+   lower impedance as noted by the 47k base-bias resistor.
+4. The 22n across the power rails is needed to keep the rails "tight." Its
+   impedance at 100MHz is much less than one ohm and it improves the
+performance of the oscillator enormously.
+5. The coil in the tank circuit is 5 turns of enameled wire with air core. The
+   secret to long range is high activity in the oscillator stage.  The tank
+circuit (made up of the coil and capacitors across it) will produce a voltage
+higher than the supply voltage due to the effect known as "collapsing magnetic
+field" and this occurs when the coil collapses and passes its reverse voltage
+to the capacitor. The antenna is also connected to this point and it receives
+this high waveform and passes the energy to the atmosphere as electromagnetic
+radiation.
+
+When the circuit is tightly constructed on a PC board, the frequency will
+not drift very much if the antenna is touched.
+
+## THE VOYAGER
+
+The only way to get a higher output from two transistors is to increase the
+supply voltage.
+
+![Voyager-Cct](images/Voyager-Cct-bw.png)
+
+The following circuit is available from Talking Electronics as a surface-mount
+kit, with some components through-hole. The project is called
+[THE VOYAGER](www.talkingelectronics.com/projects/Voyager/Voyager-P1.html).
+
+All the elements of good design have been achieved in this project. The
+circuit has a slightly higher output than the 3v circuit above, but most of
+the voltage is lost across the emitter resistor and not converted to RF. The
+main advantage of this design is being able to connect to a 9v battery. In
+a technical sense, about half the energy is wasted as the stages actually
+require about 4v - 5v for maximum output.
+
+<!--full-->![PC-on-battery11](images/PC-on-battery11.jpg)
+
+## HAND-HELD MICROPHONE
+
+![2-TrWithBufferOP](images/2-TrWithBufferOP.png)
+
+This circuit is suitable for a hand-held microphone.
+
+It does not have an audio stage but that makes it ideal as a microphone, to
+prevent feedback. The output has a buffer stage to keep the oscillator away
+from the antenna. This gives the project the greatest amount of stability
+-rather than the highest sensitivity.
+
+### INCREASING THE RANGE
+
+![FMCct-2](images/FMCct-2.png)
+
+To increase the range, the output must be
+increased. This can be done by using an RF transistor and adding an
+inductor. This effectively converts more of the current taken by the circuit
+(from the battery) into RF output. The output is classified as an untuned
+circuit. A BC547 transistor is not suitable in this location as it does
+not amplify successfully at 100MHz. It is best to use an RF transistor such
+as 2N3563.
+
+### MORE RANGE
+
+More output can be obtained by increasing the supply voltage and adding a
+capacitor across the inductor in the output stage to create a tuned output.
+
+![FMCct-3](images/FMCct-3.png)
+
+**A tuned output stage delivers more output.**
+
+The 5-30p must be adjusted each time the frequency of the bug is changed. This
+is best done with a field strength meter. See [Talking Electronics Field
+Strength Meter](http://www.talkingelectronics.com/projects/FieldStrengthMeterMkll/FieldStrengthII.html)
+ project.
+
+The 2N3563 is capable of passing 15mA in the buffer stage and about 30% is
+delivered as RF. This makes the transmitter capable of delivering about 22mW.
+
+## EMITTER TAP
+
+The following circuit taps the emitter of the oscillator
+stage.
+
+![FMCct-7](images/FMCct-7.png)
+
+The collector or the emitter can be tapped to produce about the same
+results, however tapping the emitter "loads" the oscillator less. The 47p
+capacitor is adjusted to "pick-off" the desired amount of energy from the
+oscillator stage. It can be reduced to 22p or 10p.
+
+Tapping the emitter of the oscillator transistor
+
+### GOING FURTHER
+
+The next stage to improve the output, matches the impedance
+of the output stage to the impedance of the antenna.
+
+![AntTransfCct](images/AntTransfCct.png)
+
+The impedance of the output stage is about 1k to 5k, and the impedance of
+the antenna is about 50 ohms.
+
+This creates an enormous matching problem but one effective way is with an
+RF transformer.
+
+![AntTransformer](images/AntTransformer.jpg)
+
+An RF transformer is simply a transformer that operates at high frequency. It
+can be air cored or ferrite cored. The type of ferrite needed for 100MHz
+is F28. The circuit above uses a small ferrite slug 2.6mm dia x 6mm long,
+F28 material.
+
+To create an output transformer for the circuit above, wind 11 turns
+onto the slug and 4 turns over the 11 turns. The ferrite core will do two
+things. Firstly it will pass a high amount of energy from the primary winding
+to the antenna and secondly it will
+
+THE **RF TRANSFORMER**  prevent harmonics passing to the antenna.  The
+transformer approximately doubles the output power of the transmitter.
+
+## WATER LEVEL DETECTOR
+
+This circuit can be used to automatically keep the header tank filled. It uses
+a double-pole relay.
+
+![WaterLevelDetector-3](images/WaterLevelDetector-3.png)
+
+### CIRCUIT 2
+
+The circuit below is the simplest design and consumes almost
+zero current when the tank is full. When the water is LOW, the circuit is
+turned ON via the 100k pot and 10k resistor.
+
+![WaterLevelDetector-4](images/WaterLevelDetector-4.png)
+
+When the water reaches the copper wire, the voltage on the base of the first
+transistor reduces and the current into the Darlington arrangement is too
+small to keep the relay energised and the motor turns OFF.
+
+As the water-level drops, the current into the Darlington pair increases
+and a point is reached when the relay pulls-in again.
+
+### CIRCUIT 3
+
+This simple circuit will show the water level in a tank.
+
+![WaterLevelDetector-4](images/WaterLevelDetector-4.png)
+
+It has a HIGH, MEDIUM and LOW levels and as the water touches the pads,
+the LEDs start to illuminate. This produces a range of levels to let you
+know exactly the level of the water.
+
+The sensor pads can be cut from a tin-can or you can use the lid of a tin.
+
+The main sensor is placed at the bottom of the water so the low-level LED
+will let you know the tank is almost empty.  The circuit has been drawn to
+show the transistors are placed on the top of the tank with wires going to
+each of the sensor pads. The LEDs and resistors are mounted on a wall in
+your house with the 3v supply and a push-switch.  You will need a 4-wire
+connection between the two units and this can be 4-core telephone cable.
+
+The transistors are wired as emitter-followers and this saves 4 resistors
+(base-bias resistors). It also allows the LEDs to come on slowly as the
+water rises so you get a wide indication of the water level.  You can add
+more sensors if required. Simply repeat the circuit above for 3 more levels.
+
+Any NPN transistor can be used and any value resistor between 100 ohms and
+330 ohms can be used and the voltage can be increased to 6v if you are using
+a high-value resistor.
+
+The circuit only takes current when the switch is pressed but it can be left
+ON all the time to let you know the water level, if needed.
+
+You don’t need a circuit board. Simply hammer a few nails into a length of
+wood to hold the sensors and connect the transistors to the nails by soldering.
+
+Make sure the sensor pads are away form the wood and don’t hold any water
+when the level goes down as the circuit is so sensitive that the LEDs will
+not go out.
+
+## BATTERY CHARGER - world's simplest automatic charger
+
+This is the world's simplest automatic battery charger.
+
+![AutoBatteryCharger-1](images/AutoBatteryCharger-1.png)
+
+It consists of 6 components, when connected to a 12v DC plug pack. The
+plug pack must produce more than 15v on no-load (which most plug packs
+do.) An alternative 15v transformer and a centre-tapped transformer is also
+shown. A centre-tapped transformer is referred to as: 15v-CT-15v or 15-0-15
+The relay and transistor are not critical as the 1k pot is adjusted so the
+relay drops-out at 13.7v.
+
+To improve the "pull-in" and "drop-out" voltages, the 10k can be replaced with
+a 12v zener. The zener can be made up of two 6v zeners or any combination in
+series and include ordinary diodes (drop 0.6v).
+
+The plug pack can be 300mA, 500mA or 1A and its current rating will depend
+on the size of the 12v battery you are charging.
+
+For a 1.2AH gel cell, the charging current should be 100mA. However, this
+charger is designed to keep the battery topped-up and it will deliver current
+in such short bursts, that the charging current is not important.
+
+This applies if you are keeping the battery connected while it is being
+used. In this case the charger will add to the output and deliver some
+current to the load while charging the battery. If you are charging a flat
+cell (flat 12v battery - a discharged 12v battery), the current should not
+be more than 100mA.
+
+For a 7AH battery, the current can be 500mA. And for a larger battery,
+the current can be 1Amp.
+
+Most 12v Plug Packs produce 15v to 16v on NO-LOAD and we are using this
+feature to charge the battery. We are also using the poor regulation of the
+plug pack to charge the battery without the plug pack overheating.
+
+### SETTING UP
+
+Connect the charger to a battery and place a digital meter across the battery.
+Adjust the 1k pot so the relay drops out as soon as the voltage rises to 13.7v.
+
+Place a 100R 2watt resistor across the battery and watch the voltage drop.
+
+The charger should turn on when the voltage drops to about 12.5v. This voltage
+is not extremely critical. It happens to be the "hysteresis" of the circuit
+and is determined by the value of the load in the collector of the transistor.
+
+The 22u stops the relay "squealing" or "hunting" when a load is connected to
+the battery and the charger is charging. As the battery voltage rises, the
+charging current reduces and just before the relay drops out, it squeals as
+the voltage rises and falls due to the action of the relay. The 22u prevents
+this "chattering".
+
+To increase the Hysteresis: In other words, decrease the voltage where the
+circuit cuts-in, add a 270R across the coil of the relay. This will increase
+the current required by the transistor to activate the relay and thus increase
+the gap between the two activation points. The pull-in point on the pot will
+be higher and you will have re-adjust the pot, but the drop-out point will
+be the same and thus the gap will be wider.
+
+In our circuit, the cut-in voltage was 11.5v with a 270R across the relay.
+
+Note: No diode is needed across the relay because the transistor is never
+fully turned off and no back EMF (spike) is produced by the relay.
+
+## AUTOMATIC BATTERY CHARGER
+
+![AutoBatteryCharger-2](images/AutoBatteryCharger-2.png)
+
+- trickle charger.
+
+This circuit will automatically keep a battery fully charged with the
+charge-current reducing when the battery voltage reaches 13.8v. The battery can
+be used at any time and the charger will maintain full charge.
+
+The transistor acts like a POWER ZENER (with the 13.8v zener on the base) and
+the supply rail does not rise above 13.8v + 0.6v = 14.4v. The 1N4004 removes
+the 0.6v to deliver 13.8v to the battery.
+
+If the plug pack is replaced with a supply capable of delivering a voltage
+higher than 16v (on no-load), the 3R3 (3watt) resistor will be needed. The
+transistor simply removes the charging current from the battery and wastes it
+as heat.
+
+## BATTERY CHARGER MkII
+
+![BatteryChargerMkII](images/BatteryChargerMkII.png)
+
+ - a very simple design to keep a battery "topped up."
+
+This is a very simple battery charger to keep a battery "nearly fully charged."
+It consists of 7 components, when connected to a 12v - 18v DC plug pack. The
+plug pack must produce more than 15v on no-load (which most 12v plug packs do.)
+For a 1.2AH gel cell, up to a 45Ahr car or boat battery, this charger will keep
+the battery topped-up and can be connected for many months as the battery will
+not lose water due to "gassing."
+
+The output voltage is 13.2v and this is just enough to keep the battery from
+discharging, but will take a very long time to charge a battery, if it is
+flat because a battery produces a "floating charge" of about 13.6v when it
+is being charged (at a reasonable current) and this charger is only designed
+to deliver a very small current.
+
+There is a slight difference between a "old-fashioned" car battery (commonly
+called "an accumulator") and a sealed battery called a Gel Cell. The
+composition of the plates of a gel cell is such that the battery does not
+begin to "gas" until a high voltage is reached. That is why it can be totally
+closed and only has rubber bungs that "pop" if gas at high pressure develops
+due to gross over-charging. That's why the charging voltage must not be too
+high and when the battery is fully charged, the charging current must drop
+to a very low level.
+
+## GELL CELL BATTERY CHARGER
+
+This circuit will charge gell cell batteries at 300mA or 650mA or 1.3A,
+depending on the CURRENT SENSING resistor in the 0v rail. Adjust the 5k pot for
+13.4v out and when the battery voltage reaches this level, the current will
+drop to a few milliamps. The plug pack will need to be upgraded for the 650mA
+or 1.3A charge-current. The red LED indicates charging and as the battery
+voltage rises, the current-flow decreases. The maximum is shown below and when
+it drops about 5%, the LED turns off and the current gradually drops to almost
+zero.
+
+![GellCellCharger](images/GellCellCharger.png)
+
+## TRANSISTOR TESTER COMBO 2
+
+This circuit uses an IC but it has been placed in this eBook as it is a
+transistor tester.
+
+![Combo-2](images/Combo-2.png)
+
+The circuit uses a single IC to perform 3 tests:
+
+1. Place the transistor in any orientation into the three terminals of circuit
+   1 (below, left) and a red LED will detect the base of a PNP transistor an a
+green LED will indicate the base of an NPN transistor.
+2. You now now the base lead and the type of transistor. Place the transistor
+   in Test 2 circuit (top circuit) and when you have fitted the collector and
+emitter leads correctly (maybe have to swap leads), the red or green LED will
+come on to prove you have fitted the transistor correctly.
+3. The transistor can now be fitted in the GAIN SECTION. Select PNP or NPN and
+   turn the pot until the LED illuminates. The value of gain is marked on the
+PCB that comes with the kit.  The kit has ezy clips that clip onto the leads of
+the transistor to make it easy to use the project.  The project also has a
+probe at one end of the board that produces a square wave - suitable for all
+sorts of audio testing and some digital testing.
+
+Project cost: $22.00 from Talking Electronics.
+
+## LOW MAINS DROPOUT
+
+![LowMainsDropout](images/LowMainsDropout.png)
+
+This circuit will turn off a device if the main drops
+by a say 15v. The actual voltage is adjustable. The first thing to remember
+is this: The circuit detects the PEAK voltage and this is the voltage of
+the zener diodes.
+
+For 240v mains, the peak is 338v.
+
+For a voltage drop of about 12v(RMS), the zener diodes need to have a
+combined voltage of 320v (you will need 6 x 47v + 1 x 20v + 1 x 18v). The
+10k resistor will have about 18v across it and the current will be nearly
+2mA. The wattage will be 36mW.  For a voltage drop of about 27v(RMS), you
+will need zeners for a total of 300v by using 6 x 47v + 1 x 18v. The voltage
+across the 10k resistor will be 38v and the current will be nearly 4mA. The
+wattage dissipated by the 10k resistor will be 150mW.
+
+The 10u prevents very sharp dips or drops from activating the circuit.
+
+As the voltage drops, this drop in voltage will be passed directly to the
+top of the 10k resistor and as the voltage drops, the current into the base
+of the transistor will reduce. This current is amplified by the transistor
+and when it is not sufficient to keep the relay activated, it will drop-out.
+
+## PROTECTING THE CONTACTS OF A RELAY
+
+The contacts of a relay can be protected from the damaging effects of reversing
+an actuator.
+
+![Protecting-A-Relay](images/Protecting-A-Relay.png)
+
+The circuit shows a double-pole double-throw relay driving an actuator. The 4
+"bridge diodes" around the actuator "squelch" the back-emf from damaging the
+contacts.
+
+## REDUCING RELAY CHATTER
+
+![RelayChatter](images/RelayChatter.png)
+
+To reduce the relay clicking or chattering during the activation of the relay
+driver transistor, an electrolytic can be placed between the base and 0v rail.
+In addition an electro can be placed across the relay if there is a possibility
+of the supply voltage glitching or temporally failing.
+
+
+## 4 TRANSISTOR AMPLIFIER.
+
+![4TrAmp](images/4TrAmp.png)
+
+This circuit is fully documented in [The Transistor Amplifier](http://www.talkingelectronics.com/projects/TheTransistorAmplifier/TheTransistorAmplifier.html) as Fig 105.
+
+## VIBRATING VU INDICATOR
+
+This circuit can be used to monitor the output of a
+stereo to warn when the level is too high.
+
+![VibratingVU](images/VibratingVU.png)
+
+The output is a pager motor and
+will vibrate so you don't have to keep watching VU levels. The first two
+transistors are connected so an overload in either channel will trigger the
+pager motor. No power switch is needed as all transistors are turned OFF
+when no audio is being detected.
+
+## VOX
+
+These circuits detect audio and operate a relay or produce an output
+pulse. See full details in: [The Transistor Amplifier eBook](http://www.talkingelectronics.com/projects/TheTransistorAmplifier/TheTransistorAmplifier-P2.html#VOX) - under VOX
+
+Sensitive VOX Circuit:
+
+![VOX-1](images/VOX-1.png)
+
+3v to 6v VOX Circuit:
+
+![VOX-3](images/VOX-3.png)
+
+12v VOX Circuit:
+
+![VOX-2](images/VOX-2.png)
+
+
+## OP-AMP WITH 3 TRANSISTORS
+
+This circuit shows how a simple operational amplifier can be made with 3
+transistors.
+
+![Op-amp-withTransistors](images/Op-amp-withTransistors.png)
+
+It is really an AC-coupled single-ended class A amp,
+with an open-loop gain of about 5,000, but as a demonstration-circuit, you can
+treat it as a simple op-amp. The output is biased at approximately one-half
+the supply voltage using the combined voltage drops across the two LEDs,
+the emitter-base voltage of the input transistor and the 1v drop across 1M
+feedback resistor. The 68k and 4n7 form a compensation network that prevents
+the circuit from oscillating.
+
+You can configure this op amp as an active filter or as an oscillator. It
+drives a load of 1k. The square-wave response is good at 10kHz, and the
+output reduces by 3dB at 50kHz.
+
+## CAPACITOR TESTER
+
+Circuit designed by: Charles Wenzel charles@wenzel.com
+
+![CapacitorTester](images/CapacitorTester.png)
+
+This circuit will test very small capacitors. The tone from the speaker will
+change when a capacitor is placed across the test-points "Cx."
+
+The operation of the circuit is explained in our eBook: [The Transistor
+Amplifier](http://www.talkingelectronics.com/projects/TheTransistorAmplifier/TheTransistorAmplifier-P1.html#High%20Impedance) (high impedance circuit).
+
+## HIGN BRIGHT LED - EMERGENCY LIGHT
+
+![BatteryBackup-2](images/BatteryBackup-2.png)
+
+This circuit will illuminate two 1watt
+High-bright LEDs when the power fails. The charging current is about
+20-30mA. It will take about 7 days to charge the battery and this will allow
+illumination for 5 hours, once per week.
+
+A charging current more than 50mA will gradually "dry-out" the battery and
+shorten its life.
+
+If the project is used more than 5 hours per week, the charging current can
+be increased.
+
+The 220R charging resistor can be reduced to 150R or 100R (1watt).
+
+## RELAY OFF DELAY
+
+![RelayOffDelay](images/RelayOffDelay.png)
+
+This circuit turns ON a relay when the input is above 2v
+and the relay turns OFF after 2 seconds when the signal is removed. The OFF
+delay can be increased or decreased.
+
+## AMPLIFYING A DIGITAL SIGNAL
+
+![AmplifyDigitalSig](images/AmplifyDigitalSig.png)
+
+A Digital signal is only detected as a HIGH or LOW. However if the digital
+signal does not have sufficient amplitude, it may not be detected AT ALL.
+This circuit detects a low amplitude signal and produces a high-amplitude
+signal.
+
+## PIR DETECTOR (see also LED Strip Passage Light)
+
+![PIR-Detector](images/PIR-Detector.png)
+
+This circuit detects movement and operates a relay. The PIR module has
+"Sensitivity" and "Time Delay" pots. They can be purchased on eBay for $2.71
+including postage!
+
+## DELAY before Turn On then turns OFF
+
+![DelayTurnON](images/DelayTurnON.png)
+
+This circuit turns ON the relay 4 seconds after the power is applied and then
+turns it OFF after 2 seconds.
+
+This is a request from a reader.
+
+You will need to change the component values to suit your own timing.
+
+## 10 SECOND DELAY
+
+This clever circuit turns on the LED 10 seconds after the power has been
+switched ON. The secret to its performance is the gain of the transistor.
+
+![10SecondDelay](images/10SecondDelay.png)
+
+With a gain of 200, the transistor will appear as a 470/200 = 2k3 resistor
+for the LED and for a 12v supply, this will create a current of 12-1.7 /
+2300 = 4.4mA through the LED.  The 100u will take about 10 seconds to charge
+to a point where the base is 1.7v + 0.6v = 2.3v above the 0v rail. When the
+electro charges to this voltage, the LED starts to come on.
+
+The transistor effectively becomes a 2k3 resistor and that's why no additional
+current-limiting resistor for the LED is needed. The transistor is the
+current-limiting device!
+
+## FERRET FINDER
+
+![FerretFinder](images/FerretFinder.png)
+
+This circuit produces a beep-beep-beep at approx 190kHz
+on a Long Wave Band radio.
+
+The transformer (coil) is wound on 10mm dia ferrite rod 10mm long. The
+secondary winding is 0.25mm wire. The 135t is 0.01mm wire.  The PC board is
+16mm x 14mm.
+
+The secret to the circuit working is the "transformer." The ferrite must
+be very short so the flux produced by the circuit saturates the core and
+the excess is passed to the surroundings.  A kit for the Ferret Finder is
+available from talking electronics for $5.00 plus postage.
+
+## FLASHING LIGHTS FOR MODEL RAILWAY CROSSING
+
+![FlashingCrossing](images/FlashingCrossing.png)
+
+A flashing LED is used to create the timing for the flash-rate and the
+transistor provides the alternate flash for the second set of LEDs.
+
+## FADE-ON FADE-OFF LED
+
+The LEDs in is circuit fade on when the power is applied and
+fade-off when switched off:
+
+![UpDownFadingLED-2](images/UpDownFadingLED-2.png)
+
+If you just want fade-ON and fade-OFF, this circuit is all you need. The
+Darlington transistor has internal resistors between the base and emitter of
+each transistor and these will reduce the input impedance of the transistor
+considerably. That's why you may have to use fairly low-value resistors on the
+delay section. Using two separate (normal) transistors will allow the
+resistor-values to be 100k.
+
+You can also drive "rope lights."
+
+These can be surface-mount LEDs or totally-sealed LEDs and generally have
+two wires connected to one end for the 12v supply.
+
+Three LEDs are generally connected in series inside the "rope" with a dropper
+resistor and some "ropes" can be cut after each set of three LEDs as shown in
+the diagram below:
+
+![UpDownFadingLED-3](images/UpDownFadingLED-3.png)
+
+Each set of three LEDs draws about 20mA so a rope of 24 LEDs
+takes about 160mA. Adjust the first two 100k resistors and 100u to set the
+fade-IN and fade-OUT feature.
+
+## 3-SECOND DELAY
+
+![3-secDelay](images/3-secDelay.png)
+
+When this circuit is connected to a supply (from 3v to
+12v), the LED turns on and gradually fades after about 3 seconds.
+
+## REPLACING A "POWER POT"
+
+A Power Potentiometer (also called a rheostat) is a potentiometer with a rating
+of 1watt or more and these can be very expensive. A 10watt pot can cost as much
+as $25 to $35.
+
+This type of pot can be replaced very cheaply by using an ordinary 500R pot and
+a power transistor.
+
+The power pot generally "burns out" when it is at least resistance and this
+circuit replaces the pot with one slight exception.
+
+![PowerPot](images/PowerPot.png)
+
+The circuit does not deliver full rail voltage. The output is about 0.9v below
+rail voltage. A switch has been included to produce full rail output: 10 watt
+POWER POT If the Power Pot is a rheostat, it will have two terminals. One
+terminal called "A" will go to rail voltage and the other terminal (the centre
+terminal - called the wiper) we will call "B," will go to the load.
+
+<!--full-->![PowerPot](images/PowerPot.jpg)
+
+Build the circuit above and take A and B to the same points as before and
+"G" goes to Ground or "earth" or "Chassis."
+
+## CHANGING 24v to 12v
+
+This circuit allows to you charge a 24v project from a 12v charger. It converts
+the two 12v batteries from series to parallel:
+
+![12v-24v](images/12v-24v.png)
+
+## ZENER DIODE TESTER
+
+All diodes are Zener diodes. For instance a 1N4148 is
+a 120v zener diode as this is its reverse breakdown voltage.
+
+And a zener diode can be used as an ordinary diode in a circuit with a
+voltage that is below the zener value.
+
+For instance, 20v zener diodes can be used in a 12v power supply as the
+voltage never reaches 20v, and the zener characteristic is never reached.
+
+Most diodes have a reverse breakdown voltage above 100v, while most zeners
+are below 70v. A 24v zener can be created by using two 12v zeners in series
+and a normal diode has a characteristic voltage of 0.7v. This can be used to
+increase the voltage of a zener diode by 0.7v.  To tests a zener diode you
+need a power supply about 10v higher than the zener of the diode. Connect
+the zener across the supply with a 1k to 4k7 resistor and measure the voltage
+across the diode. If it measures less than 1v, reverse the zener.
+
+If the reading is high or low in both directions, the zener is damaged.
+
+Here is a zener diode tester. The circuit will test up to 56v zeners.
+
+![ZenerTesterCct](images/ZenerTesterCct.png)
+
+## LED FADER
+
+![LEDfader](images/LEDfader.png)
+
+This circuit was requested by a theatrical group to slowly
+change the colour of a set of LEDs over a period of 1-2 seconds.
+
+## POINT MOTOR DRIVER
+
+One of the first things (you will want) when expanding a model railway is a
+second loop or siding.
+
+This needs a set of points and if they are distant from the operator, they
+will have to be electrically operated. There are a number of controllers on
+the market to change the points and some of them take a very high current. (You
+can get a low-current Point Motor).
+
+The high current is needed because the actuating mechanism is very inefficient,
+but it must be applied for a very short period of time to prevent the point
+motor getting too hot.
+
+Sometimes a normal switch is used to change the points and if the operator
+forgets use it correctly, the Point Motor will "burn-out" after a few seconds.
+
+To prevent this from happening we have designed the following circuit. It
+operates the Point Motor for 5mS to 10mS (a very short time) and prevents
+any damage.
+
+You can use a Peco switch (PL23 - about $10.00!!) or an ordinary toggle
+switch (change-over switch).
+
+You can connect to either side of the Point Motor and both contacts of the
+other side go to 14v to 22v rail.
+
+<!--full-->![PointMotorSchm](images/PointMotor-Schm.png)
+<!--lite-->![PointMotorSchm](images/PointMotor-2.png)
+
+![PointMotorDriver-1](images/PointMotorDriver-1.png)
+
+Point Motor mounted under the track.  The Point-Motor shaft moves left-right
+to change the points.
+
+## COIN COUNTER
+
+![CoinCounter](images/CoinCounter.png)
+
+This circuit was designed for a reader who wanted to change
+his amusement machine from 3 coins to 4 coins.
+
+The circuit can be modified to "divide-by" any value from 2 to 10:
+
+## HEADLIGHT EXTENDER
+
+This circuit extends the "ON TIME" for headlights and
+the circuit does not take any current when the time has expired.  When the
+headlights are switched OFF, the circuit keeps the lights ON for 30 seconds.
+
+![HeadlightExtender-Ccts](images/HeadlightExtender-Ccts.png)
+
+The electronics needs 3 connections. The diagram above shows these
+connections. The first connection is to the 12v side of the battery. The output
+of the circuit is the emitter of the BD679 transistor and this connects to
+the relay where the wire from the headlight switch is connected. Finally the
+circuit connects to the chassis of the car.  The "delay-time" is determined
+by the 100u and 100k resistor. The resistor can be increased to 470k and
+the capacitor can be increased to 470u. For an adjustable time-delay, use
+a 500k mini trim pot for the 100k resistor.
+
+## TURN INDICATOR ALARM
+
+Many turn indicators in cars, motor bikes and golf
+carts are not very loud.
+
+That's why they get left ON.
+
+Here are 2 circuits for you to experiment with and work out which is the best
+for your application.  They all use a piezo buzzer that has an oscillator
+circuit inside the case and produces a 3kHz annoying tone. We have listed
+two different types. TypeA produces a constant 3kHz tone that increases with
+loudness as the voltage increases.
+
+TypeB is called a REVERSING BUZZER and produces a beep-beep-beep when
+a constant DC voltage is applied. The output increases in volume as the
+voltage increases.
+
+Circuit A turns on after 15 seconds to let you know the turn indicator
+is active.
+
+You can use Piezo TypeA to get a beep when the turn light is ON and silence
+when the light is OFF.
+
+Piezo typeB will produce a beep-beep-beep when the light is ON and silence
+when it is OFF.
+
+![TurnAlarm-1](images/TurnAlarm-1.png)
+
+Beeps after 15 seconds.
+
+Circuit B turns on after 15 seconds and the piezo will increase in loudness.
+
+![TurnAlarm-2](images/TurnAlarm-2.png)
+
+Beeps after 15 seconds with increasing volume
+
+A piezo buzzer requires about 15mA and operates from 3v to 12v. Reversing
+buzzers are available from Talking Electronics for $4.50 each. They are also
+available on the web for $20.00
+
+## SUPPLY VOLTAGE MONITOR
+
+These circuits will monitor supply voltages of ±5v and ±12v. They are not
+intended to indicate the level of the inputs. The LED will only illuminate when
+all the voltages are present.
+
+![SupplyVoltageMonitor](images/SupplyVoltageMonitor.png)
+
+## SOLAR CHARGER
+
+![Solar-Charger](images/Solar-Charger.png)
+
+This is a simple circuit to keep a set of NiCads fully
+charged via a solar panel.
+
+The mathematics and the circuit is the same for a 6v or 12v solar panel.
+
+The mathematics revolves around CURRENT and not VOLTAGE.  Remember: NiCad
+cells are 1.2v and you will need 5 cells to produce a 6v supply.
+
+Ni-MH cells are 1.2v and come in 1,700mAHr and 3,000mAHr (and other
+capacities).
+
+You can recharge ordinary alkaline cells (1.5v) about 50 times. It has about
+the same capacity as NiCad after the second re-charge.
+
+1. MEASURE THE CURRENT TAKEN BY THE PROJECT
+   Firstly measure the current taken by the project. If it is a constant 10mA,
+you will need to charge the batteries with 40mA from the solar panel, if we
+assume the sun shines for 8 hours per day.
+   
+   If the circuit takes 1amp for 1 hour, we need to charge the batteries with
+150mA for 8 hours of sunshine.
+   
+   If the circuit takes 500mA for 15 minutes each hour, this is equivalent to a
+constant 125mA and the charging will have to be 500mA for 8 hours each day.
+(Even though this is equal to 3Ahr per day, the charging occupies 8 hours and
+thus the storage only needs to be 2Ahr and 2400mAHr cells can be used).
+
+  Our mathematics takes into account 80% efficiency in charging the cells.
+
+  If the NiCad cells are 600mAHr, the maximum charging current is 100mA.
+
+  If the cells are 2,400mAHr, the maximum charging current is 500mA.
+
+  This charging current takes into account the fact that the cells will be
+fully charged towards the end of each day and that's why the current should
+not be too high.
+
+2. MEASURE THE CHARGING CURRENT
+   Build one of the circuits below and use a 100 ohm (1 watt) resistor for the
+current-limiting.
+   Connect a multimeter (select 0 - 500mA or 0 - 2Amp range) as shown and measure
+the current during the day. Take a few readings and work out and average
+current and approx the length of each day.  Every solar panel will deliver
+a different current and it is not possible to specify any values. That's
+why you have to take readings. If the current is too high, add another 100
+ohm resistor in series. If the current is too low, place a 100 ohm resistor
+across the first 100 ohm resistor.
+
+## WHITE NOISE GENERATOR
+
+![WhiteNoise](images/WhiteNoise.png)
+
+The basis of a white noise generator is the reverse
+connection of the base-emitter junction of a transistor as shown in fig A.
+When the junction sees a voltage above about 5v, it breaks down and this
+causes the voltage to reduce. The junction ceases to break down and the
+condition repeats. The result is a waveform of a few millivolts to over 2v,
+depending on the value of the resistor supplying current to the junction.
+This noise sounds like "ssssssssss" and can be added to an amplifier to
+produce all sorts of sound effects including Steam Sound for a model railway.
+The waveform contains all amplitudes and frequencies from audible up to AM
+broadcast band.
+
+Try the following circuits and see how they work. The supply must be over
+5v and preferably more than 8v. That's why many of the circuits specify 12v
+and higher.
+
+## INTERCOM or TELEPHONE HANDSET
+
+You can make your own intercom or replace
+circuitry in old-style handsets with either of these circuits.
+
+Telephone amplifier circuits are completely different to normal amplifier
+circuits.  For a start, they have very high negative feedback to prevent
+"whistle" and in telephone-speak the circuit is designed so sounds from
+the earpiece (receiver) are not picked up by the mouthpiece (microphone)
+and amplified to crate a whistle.
+
+Secondly, the load for the amplifier is actually the relay at the exchange
+and the signal is picked off at the point where the amplifier connects to
+the relay and sent to the other telephone.
+
+This means the supply for both the pre-amplifier and the output stage are
+on the same wire as the signal to the other phone.
+
+The voltage across the first circuit is generated by the 150k turning ON the
+first BC547 transistor and it "pulls-up" the second transistor (a partial
+emitter follower).
+
+This creates current through the 150R and a voltage is developed across this
+resistor so that a voltage of approx 15v is developed across the whole circuit.
+
+Here are two circuits for the handset:
+
+![TelephoneHandset](images/TelephoneHandset.png)
+
+![TelephoneHandset-2](images/TelephoneHandset-2.png)
+
+## 38KHz INFRARED LINK
+
+![38kHzTx](images/38kHzTx.png)
+
+![38kHzRx](images/38kHzRx.png)
+
+This circuit is an IR transmitter and IR receiver with a 38kHz detector TSOP
+1738 in the receiver. This means the circuit will be immune to ambient light.
+The motor is activated when the transmitter is turned ON.
+
+## FRIDGE ALARM
+
+![FridgeAlarm-1](images/FridgeAlarm-1.png)
+
+This circuit will start to produce a sound about 15 seconds
+after the Light Dependent Resistor detects light:
+
+## FRIDGE ALARM MkII
+
+![FridgeAlarm-2](images/FridgeAlarm-2.png)
+
+This circuit drives an active piezo buzzer and the circuit takes no current
+when "sitting around."
+
+It will start to produce a sound about 15 seconds after the Light Dependent
+Resistor detects light.  The mini piezo buzzer contains a transistor and
+inductor to produce a high amplitude oscillator to drive the diaphragm and
+produce a loud squeal from a supply of 3v to 5v. It will not "turn on" from
+a slowly rising voltage so the circuit must be designed to rise rapidly when
+light is detected. That's the purpose of the 2nd and 3rd transistors. They
+form a high-gain amplifier where the output rises quickly due to the positive
+feedback provided by the 100n.
+
+As soon as the second transistor starts to turn on, it turns on the 3rd
+transistor and the collector voltage rises. The right-plate of the 100n
+rises and since the 100n is uncharged, the left plate (lead) rises and
+increases the voltage and also the current into the base of the second
+transistor. This makes it turn on more and the action continues very quickly
+until both transistors are fully turned on. They stay turned on by the voltage
+(and current) provided by the first transistor.
+
+Even though we normally see the second two transistors used as an oscillator,
+we can use the "rapid turn-on" feature to "kick-start" the piezo and if the
+middle transistor is provided with too-much voltage (current) on the base,
+the oscillator feature will not occur because the current into the base is
+too high and the 100n cannot remove this current during the turn-off period
+of the cycle. The only unusual feature of this circuit is the oscillator
+section starts to oscillate at very low amplitude when the first transistor
+turns off (when the LDR ceases to be illuminated) and a 10u has been added
+to stop this oscillation so it takes no current when at rest.
+
+All the other designs (using a chip), take a small current when at rest and
+the worst circuit comes from Future Kit, a Thailand based kit company. You
+can see the discussion in Spot The Mistake Page 17 under FRIDGE ALARM.
+
+## BATTERY-LOW BEEPER
+
+If you want a simpler circuit using transistors, the
+following design will produce a constant beep when the battery voltage falls
+below 10v.
+
+The actual voltage can be adjusted by using LEDs and diodes in place of
+the zener.
+
+![BatteryLowBeeper-3](images/BatteryLowBeeper-3.png)
+
+The mini piezo buzzer contains a transistor and inductor to produce a high
+amplitude oscillator to drive the diaphragm and produce a loud squeal from
+a supply of 5v to about 10v. It will not "turn on" from a slowly rising
+voltage so the circuit must be designed to rise rapidly when the voltage
+drop down to the "detection-point."
+
+That's the purpose of the 3rd and 4th transistors. They form a high-gain
+amplifier where the output rises quickly due to the positive feedback provided
+by the 100n.
+
+As soon as the third transistor starts to turn on, it turns on the 4th
+transistor and the collector voltage rises. The right-plate of the 100n rises
+and since the 100n is uncharged, the left plate (lead) rises and increases
+the voltage and also the current into the base of the third transistor. This
+makes it turn on more and the action continues very quickly until both
+transistors are fully turned on. They stay turned on by the voltage (and
+current) provided by the first transistor.
+
+Even though we normally see these two transistors used as an oscillator,
+we can use the "rapid turn-on" feature to "kick-start" the piezo and if the
+third transistor is provided with too-much voltage (current) on the base,
+the oscillator feature will not occur because the current into the base is
+too high and the 100n cannot remove this current during the turn-off period
+of the cycle. The only unusual feature of this circuit is the oscillator
+section starts to oscillate at very low amplitude when the second transistor
+turns off (when the battery voltage rises) and a 10u has been added to stop
+this oscillation so it takes no current when the buzzer is not producing a
+tone. The only stages that take any quiescent current are the zener and the
+1M collector load resistor.
+
+![BatteryLowBeeper-3_002](images/BatteryLowBeeper-3_002.png)
+
+This circuit will buzz when the voltage drops to a pre-set level.
+
+To adjust the circuit, get as many 10,000u electrolytics as possible and
+use them in place of the Li-ion cell.
+
+Charge the electrolytics with the Li-Ion cell and remove it.  The circuit
+takes a very amount of current and the voltage across the electrolytics
+will gradually drop. Monitor this with a digital meter and set the 100k
+pot to the required voltage.
+
+## 4 PHONE SECURITY
+
+![4PhoneSecurityCct-2](images/4PhoneSecurityCct-2.png)
+
+See full article on: [http://www.electronicsmaker.info](http://www.electronicsmaker.info/)
+
+## SOLAR TRACKER
+
+![SolarTracker-1-Small](images/SolarTracker-1-Small.png)
+
+## SIMPLE SONIC DETECTOR
+
+This is a simple feedback circuit that produces
+a whistle called a FEEDBACK WHISTLE.
+
+![SonicDetector](images/SonicDetector.png)
+
+This terrible sound was very common in old amplifiers when the microphone
+was placed too near the speaker.
+
+All you need is a high-gain amplifier and a microphone. We have used a piezo
+diaphragm for both the microphone and speaker.
+
+The circuit works best on 12v but will produce good results on 6v or 9v.
+
+Vary the distance between the two piezos and turn one over and lift it off
+the bench to see the different effects and range. Move your hand closer to
+the piezos and see how the frequency changes. This is due to the length of
+the wave and if you are located at a distance where the wave does not add
+to the vibration of the receiving diaphragm, you get silence.
+
+The Circuit produces a FEEDBACK WHISTLE
+
+## MAGNETIC DOOR LOCK DELAY
+
+![MagDoorLatchDelay](images/MagDoorLatchDelay.png)
+
+This circuit turns OFF the Magnetic Door Lock for 10 second to 30 seconds to
+allow you to enter. It turns ON after 10 seconds to 30 seconds.
+
+## 5 SECOND ALARM
+
+This circuit operates the alarm for 5 seconds, even if the switch is kept
+closed:
+
+![PiezoAlarmBottom](images/PiezoAlarmBottom.jpg)
+
+![PiezoAlarmBottom-2](images/PiezoAlarmBottom-2.jpg)
+
+The original reed switch can be used but the bottom connection to the
+board must be isolated and re-wired.  The reed switch cannot be de-soldered as
+it will fall apart. Change the value of the 4u7 electrolytic to increase the
+time. Closing the switch (in the circuit diagram above) operates the alarm.
+
+When the voltage between the middle terminal of the slide switch and the lower
+terminal is reduced to 0v, the circuit operates. A very small current comes
+from the COB module via the middle pin of the slide switch and this current
+charges the 4u7 to 4.5v and the circuit turns OFF.
+
+At the same time the two 22u are fully discharged.  When the switch is closed,
+the 4u7 is discharged via the two 22u electrolytics and the alarm is activated.
+If the switch is immediately released, the 4u7 takes time to charge via the COB
+module.
+
+If the switch is kept closed, the COB module charges the 4u7 and the 22u
+electrolytics and eventually turns OFF. If the switch is now opened, the 22u
+electrolytics discharge via the 1M.  This takes a considerable time and the
+alarm cannot be re-activated for a few seconds.

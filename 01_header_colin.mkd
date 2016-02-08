@@ -1,0 +1,234 @@
+% 200 Transistor Circuits
+% Colin Mitchell
+
+# INTRODUCTION
+
+This e-book contains 200+ transistor circuits. Most of them can be made with
+components from your "junk box" and hopefully you can put them together in less
+than an hour. The idea of this book is to get you into the fun of putting
+things together and there's nothing more rewarding than seeing something work.
+It's amazing what you can do with a few transistors and some additional
+components. And this is the place to start. Most of the circuits are
+"stand-alone" and produce a result with as little as 5 parts.
+
+We have even provided a simple way to produce your own speaker transformer by
+winding turns on a piece of ferrite rod. Many components can be obtained from
+transistor radios, toys and other pieces of discarded equipment you will find
+all over the place.
+
+To save space we have not provided lengthy explanations of how the circuits
+work. This has already been covered in TALKING ELECTRONICS Basic Electronics
+Course, and can be obtained on a [CD for
+$10.00](mailto:talking@tpg.com.au?subject=Please send details of how I can pay
+for the CD) (posted to anywhere in the world) See [Talking Electronics
+website](http://www.talkingelectronics.com) for more details. Transistor data
+is at the bottom of this page and a transistor tester circuits are also
+provided.
+
+There are lots of categories and I am sure many of the circuits will
+be new to you, because some of them have been designed recently by me.
+Basically there are two types of transistor: PNP and NPN. We have labelled the
+NPN transistor as BC547. This means you can use ANY NPN transistor, such as
+2N2222, BC108, 2N3704, BC337 and hundreds of others. Some circuits use TUN for
+Transistor Universal NPN and this is the same as our reasoning - the
+transistor-type is just to let you know it is not critical. BC557 can be
+replaced by: 2N3906, BC327 and many others. Don't worry too much about the
+transistor-type. Just make sure it is NPN, it this is the type needed. If it is
+an unknown transistor-type, you need to identify the leads then put it in the
+circuit.
+
+You have a choice of building a circuit "in the air," or using a experimenter
+board (solderless breadboard) or a matrix board or even a homemade printed
+circuit board. The choice is up to you but the idea is to keep the cost to a
+minimum - so don't buy anything expensive. If you take parts from old equipment
+it will be best to solder them together "in the air" (as they will not be
+suitable for placing on a solderless breadboard as the leads will be bent and
+very short). This way they can be re-used again and again.
+
+No matter what you do, I know you will be keen to hear some of the "noisy"
+circuits in operation. Before you start, the [HOME-MADE SPEAKER TRANSFORMER]
+project and [TRANSISTOR TESTER 1] are the first things you should look at. If you
+are starting in electronics, see the [WORLDS SIMPLEST CIRCUIT]. It shows how a
+transistor works and three transistors in the 8 Million Gain project will
+detect microscopic levels of static electricity! You can look through the Index
+but the names of the projects don't give you a full description of what they
+do. You need to look at the circuits. And I am sure you will.
+
+# KIT OF PARTS TO BUILD THE CIRCUITS
+
+<!--full-->\href{mailto:talking@tpg.com.au?subject=Buying 15.00 dollar kit for Transistor Circuits&body=Please e-mail the cost of buying 15.00 dollar kit for Transistor Circuits by air mail to my country: ______ and send details of how I can pay for it. My name is: ______  }{\includegraphics{images/buynow.png}}
+
+<!--lite-->[CLICK THIS LINK TO BUY/REQUEST A 15.00 DOLLAR KIT FROM COLIN MITCHEL (SHIPPED by AIR MAIL)](mailto:talking@tpg.com.au?subject=Buying 15.00 dollar kit for Transistor Circuits&amp;body=Please e-mail the cost of buying 15.00 dollar kit for Transistor Circuits by air mail to my country:___________________  and send details of how I can pay for it. My name is:________)
+
+Talking Electronics supplies a kit of parts that can be used to build the
+majority of the circuits in this book. The kit costs $15.00 plus postage.
+Email [Colin Mitchell](mailto:talking@tpg.com.au?subject=Buying 15.00 dollar kit for Transistor Circuits&amp;body=Please e-mail the cost of buying 15.00 dollar kit for Transistor Circuits by air mail to my country:___________________  and send details of how I can pay for it. My name is:________) to get it.
+
+The kit contains the following components:
+
+- 3 - 47R
+- 5 - 220R
+- 5 - 470R
+- 5 - 1k
+- 5 - 4k7
+- 5 - 10k 
+- 2 - 33k 
+- 4 - 100k
+- 4 - 1M
+- 1 - 10k mini pot
+- 1 - 100k mini pot
+- 2 - 10n 
+- 2 - 100n
+- 5 - 10u electrolytics
+- 5 - 100u electrolytics
+- 5 - 1N4148 signal diodes
+- 6 - BC547 transistors - NPN - 100mA
+- 2 - BC557 transistors  - PNP - 100mA
+- 1 - BC338 transistor  - NPN - 800mA
+- 3 - BD679 Darlington transistors - NPN - 4amp
+- 5 - red LEDs
+- 5 - green LEDs
+- 5 - orange LEDs
+- 2 - super-bright WHITE LEDs - 20,000mcd
+- 1 - 3mm or 5mm flashing LED
+- 1 - mini 8R speaker
+- 1 - mini piezo 
+- 1 - LDR (Light Dependent Resistor)
+- 1 - electret microphone
+- 1m - 0.25mm wire 
+- 1m - 0.5mm wire 
+- 1 - 10mH inductor
+- 1 - push button 
+- 5 - tactile push buttons
+- 1 - Experimenter Board (will take 8, 14 and 16 pin chips)
+- 5 - mini Matrix Boards:  7 x 11 hole, 11 x 15 hole, 6 x 40 hole,
+surface-mount 6 x 40 hole board or others.
+
+\- plus extra 30 resistors and 10 capacitors for experimenting.
+
+<!-- full -->Photo of a kit of components (each batch is slightly different):
+
+<!-- full -->![kit](images/TrKitComponents.jpg)
+
+There are more components than you think. . . plus an extra bag of approx 30
+components. The 8 little components are switches and the LDR and flashing LED
+is hiding. 
+
+In many cases, a resistor or capacitor not in the kit, can be created by
+putting two resistors or capacitors in series or parallel or the next higher or
+lower value can be used.
+
+Don't think transistor technology is obsolete. Many complex circuits have one
+or more transistors to act as buffers, amplifiers or to connect one block to
+another. It is absolutely essential to understand this area of electronics if
+you want to carry out design-work or build a simple circuit to carry out a
+task. 
+
+We also have an eBook:
+[THE TRANSISTOR AMPLIFIER](http://www.talkingelectronics.com/projects/TheTransistorAmplifier/TheTransistorAmplifier-P1.html)
+with over 100 different transistor circuits - proving the transistor can be
+connected in so many ways.
+
+# THEORY
+
+Read the full article [HERE (the Transistor Amplifier eBook)](http://www.talkingelectronics.com/projects/TheTransistorAmplifier/TheTransistorAmplifier-P1.html)
+
+The first thing you will want to know is:
+
+## HOW DOES A TRANSISTOR WORK?
+
+![Theory](images/Theory-1.png)
+
+**Diagram "A"** shows an NPN transistor with the legs covering the symbol showing
+the name for each lead. 
+
+The transistor is a "general purpose" type and and is the smallest and cheapest
+type you can get. The number on the transistor will change according to the
+country where the circuit was designed but the types we refer to are all the
+SAME. 
+
+**Diagram "B"** shows two different "general purpose" transistors and the different
+pinouts. You need to refer to data sheets or test the transistor to find the
+correct pinout. 
+
+**Diagram "C"** shows the equivalent of a transistor as a water valve. As more
+current (water) enters the base, more water flows from the collector to the
+emitter. 
+
+**Diagram "D"** shows the transistor connected to the power rails. The collector
+connects to a resistor called a LOAD and the emitter connects to the 0v rail or
+earth or "ground."  
+
+**Diagram "E"** shows the transistor in SELF BIAS mode. This is called a COMMON
+EMITTER stage and the resistance of the BASE BIAS RESISTOR is selected so the
+voltage on the collector is half-rail voltage.  In this case it is 2.5v. 
+
+To keep the theory simple, here's how you do it. Use 22k as the load
+resistance.  Select the base bias resistor until the measured voltage on the
+collector 2.5v. The base bias will be about 2M2. 
+
+This is how the transistor reacts to the base bias resistor:
+
+- The base bias resistor feeds a small current into the base and this makes the
+  transistor turn on and create a current-flow though the collector-emitter
+leads. 
+- This causes the same current to flow through the load resistor and a
+  voltage-drop is created across this resistor. This lowers the voltage on the
+collector. 
+- The lower voltage causes a lower current to flow into the base and the
+  transistor stops turning on a slight amount. The transistor very quickly
+settles down to allowing a certain current to flow through the
+collector-emitter and produce a voltage at the collector that is just
+sufficient to allow the right amount of current to enter the base. 
+
+**Diagram "F"** shows the transistor being turned on via a finger. Press hard on
+the two wires and the LED will illuminate brighter. As you press harder, the
+resistance of your finger decreases. This allows more current to flow into the
+base and the transistor turns on harder. 
+
+**Diagram "G"** shows a second transistor to "amplify the effect of your finger"
+and the LED illuminates about 100 times brighter.  Diagram "H" shows the effect
+of putting a capacitor on the base lead. The capacitor must be uncharged and
+when you apply pressure, the LED will flash brightly then go off. This is
+because the capacitor gets charged when you touch the wires. As soon as it is
+charged NO MORE CURRENT flows though it. The first transistor stops receiving
+current and the circuit does not keep the LED illuminated. To get the circuit
+to work again, the capacitor must be discharged. This is a simple concept of
+how a capacitor works. A large-value capacitor will keep the LED illuminated
+for a longer period of time. 
+
+**Diagram "I"** shows the effect of putting a capacitor on the output. It must be
+uncharged for this effect to work. We know from Diagram G that the circuit will
+stay on when the wires are touched but when a capacitor is placed in the
+output, it gets charged when the circuit turns ON and only allows the LED to
+flash. 
+
+
+1. This is a simple explanation of how a transistor works. It amplifies the
+   current going into the base about 100 times and the higher current flowing
+through the collector-emitter leads will illuminate a LED. 
+2. A capacitor allows current to flow through it until it gets charged. It must
+   be discharged to see the effect again.
+
+## INCREASING THE VOLTAGE 
+
+You can change the voltage of many circuits from 6v to 12v or 3v to 6v without
+altering any of the values. I can see instantly if this is possible due to the
+value of the components and here's how I do it: Look at the value of the
+resistors driving the load(s). Work out the current entering each load and see
+if it is less than the maximum allowable. Then, take a current reading on
+the lower voltage. Increase the voltage to the higher value and take another
+reading. In most cases the current will increase to double the value (or a
+little higher than twice the original value). If it is over 250% higher, you
+need to feel each of the components and see if any are getting excessively hot.
+If any LEDs are taking excessive current, double the value of the
+current-limiting resistor. If any transistor is getting hot, increase the
+value of the load resistor. In most cases, when the voltage is doubled, the
+current will will crease to double the original. This means the circuit will
+consume 4 times the original energy. This is just a broad suggestion to answer
+the hundreds of emails I get on this topic.
+
+## RESISTOR COLOUR CODE
+
+![Resistor Colour Code](images/ResColourCode.png)
+

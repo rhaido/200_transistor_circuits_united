@@ -1,0 +1,26 @@
+#!/bin/bash
+
+SOURCE=$(ls *colin.mkd)
+
+NAME=200_transistor_circuits
+
+PDF=${NAME}.pdf
+LIGHT_PDF=${NAME}-light.pdf
+EPUB=${NAME}.epub
+
+set -x
+
+cat $SOURCE | \
+  egrep -v '^<!--[[:space:]]*lite[[:space:]]*-->' | \
+  pandoc -f markdown-implicit_figures \
+    -V geometry:margin=1.5cm --toc --toc-depth=2 -o $PDF
+
+cat $SOURCE | \
+  egrep -v '^<!--[[:space:]]*full[[:space:]]*-->' | \
+  pandoc -f markdown-implicit_figures \
+    -V geometry:margin=1.5cm  --toc --toc-depth=2 -o $LIGHT_PDF
+
+cat $SOURCE | \
+  egrep -v '^<!--[[:space:]]*full[[:space:]]*-->' | \
+  pandoc -f markdown-implicit_figures \
+    -V geometry:margin=1.5cm  --toc --toc-depth=2 -o $EPUB
