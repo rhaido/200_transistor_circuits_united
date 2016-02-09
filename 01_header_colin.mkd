@@ -27,7 +27,7 @@ provided.
 
 There are lots of categories and I am sure many of the circuits will
 be new to you, because some of them have been designed recently by me.
-Basically there are two types of transistor: PNP and NPN. We have labelled the
+Basically there are two types of transistor: PNP and NPN. We have labeled the
 NPN transistor as BC547. This means you can use ANY NPN transistor, such as
 2N2222, BC108, 2N3704, BC337 and hundreds of others. Some circuits use TUN for
 Transistor Universal NPN and this is the same as our reasoning - the

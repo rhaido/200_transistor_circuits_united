@@ -2336,7 +2336,7 @@ emitter leads correctly (maybe have to swap leads), the red or green LED will
 come on to prove you have fitted the transistor correctly.
 3. The transistor can now be fitted in the GAIN SECTION. Select PNP or NPN and
    turn the pot until the LED illuminates. The value of gain is marked on the
-PCB that comes with the kit.  The kit has ezy clips that clip onto the leads of
+PCB that comes with the kit.  The kit has easy clips that clip onto the leads of
 the transistor to make it easy to use the project.  The project also has a
 probe at one end of the board that produces a square wave - suitable for all
 sorts of audio testing and some digital testing.
@@ -2772,7 +2772,7 @@ The mathematics and the circuit is the same for a 6v or 12v solar panel.
 The mathematics revolves around CURRENT and not VOLTAGE.  Remember: NiCad
 cells are 1.2v and you will need 5 cells to produce a 6v supply.
 
-Ni-MH cells are 1.2v and come in 1,700mAHr and 3,000mAHr (and other
+Ni-MH cells are 1.2v and come in 1,700mA-hr and 3,000mA-hr (and other
 capacities).
 
 You can recharge ordinary alkaline cells (1.5v) about 50 times. It has about
@@ -2789,13 +2789,13 @@ assume the sun shines for 8 hours per day.
    If the circuit takes 500mA for 15 minutes each hour, this is equivalent to a
 constant 125mA and the charging will have to be 500mA for 8 hours each day.
 (Even though this is equal to 3Ahr per day, the charging occupies 8 hours and
-thus the storage only needs to be 2Ahr and 2400mAHr cells can be used).
+thus the storage only needs to be 2Ahr and 2400mA-hr cells can be used).
 
   Our mathematics takes into account 80% efficiency in charging the cells.
 
-  If the NiCad cells are 600mAHr, the maximum charging current is 100mA.
+  If the NiCad cells are 600mA-hr, the maximum charging current is 100mA.
 
-  If the cells are 2,400mAHr, the maximum charging current is 500mA.
+  If the cells are 2,400mA-hr, the maximum charging current is 500mA.
 
   This charging current takes into account the fact that the cells will be
 fully charged towards the end of each day and that's why the current should

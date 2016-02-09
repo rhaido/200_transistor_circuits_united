@@ -21,7 +21,7 @@ If you don't use identical transformers, the output voltage will be higher or
 lower than the "mains" voltage and the wattage will be determined by the
 smaller transformer.
 
-![Safe 240 Sypply](images/Safe240vSupply.png)
+![Safe 240 Supply](images/Safe240vSupply.png)
 
 This arrangement is not perfectly safe, but is the best you can get when
 working on projects such as switch-mode power supplies, capacitor-fed
@@ -147,16 +147,16 @@ wattage of the panel is important. If the wattage of an 18v panel is 6watts,
 the current is 6/18 = 0.33 amps = 330mA. To prevent overcharging a battery, the
 charging current should not be more than one-tenth its amp-hr capacity.
 
-For instance, a 2,000mAhr set of cells should not be charged at a rate higher
+For instance, a 2,000mA-hr set of cells should not be charged at a rate higher
 than 200mA for 14 hours. This is called its 14-hour rate. But this rating is a
 CONSTANT RATING and since a solar panel produces an output for about 8 hours
 per day, you can increase the charging current to 330mA for 8 hours. This will
 deliver the energy to fully charge the cells. 
 
 That's why a 6 watt panel can be directly connected to a set of (nearly fully
-discharged) 2,000mAhr cells. For a 12v 1.2AHr battery, the charging current
+discharged) 2,000mA-hr cells. For a 12v 1.2A-hr battery, the charging current
 will be 100mA for 12 hours or 330mA for 4 hours and a regulator circuit will be
-needed to prevent overcharging. For a 12v 4.5AHr battery, the charging current
+needed to prevent overcharging. For a 12v 4.5A-hr battery, the charging current
 will be 375mA for 12 hours and a larger panel will be needed.
 
 ### Adding a Diode
@@ -237,7 +237,7 @@ adjust the LOW voltage trim pot to the 10.5v supply.
 
 ## TRANSISTOR TESTER 1
 
-<!-- lite -->![Tansistor Tester 1](images/TrTester.png)
+<!-- lite -->![Transistor Tester 1](images/TrTester.png)
 
 **Transistor Tester - 1** project will test all types of transistors including
 Darlington and power. The circuit is set to test NPN types. To test PNP types,
@@ -593,7 +593,7 @@ If the author not not keep experimenting, he would have missed this amazing feat
 
 A very high efficiency circuit; for the transformer use 0.25mm wire, wind 200
 turns around any nut and bolt (M5, 25mm long); for a **good** brightness use
-10k resistor (curren 25mA); use 3k3 for a very bright light (50 mA). If LEDs do
+10k resistor (current 25mA); use 3k3 for a very bright light (50 mA). If LEDs do
 not illuminate, reverse leads _X_ and _Y_ of the inductor
 
 ## DUAL 3v WHITE LED FLASHER
@@ -819,7 +819,7 @@ series to the second circuit using a heatsinked BD140 transistor.
 
 ## ON - OFF VIA MOMENTARY PUSH-BUTTONS 
 
-![On-Off via two buttonts](images/On-OFF-Cct.png)
+![On-Off via two buttons](images/On-OFF-Cct.png)
 
 _See Also Push-ON  Push-OFF (in 101-200 Circuits)_
 
@@ -2871,12 +2871,12 @@ battery and as more light is detected by the panel, the current increases.
 
 A 0.5watt panel contains 100mA cells and a 1watt panel contains 200mA cells.
 
-The battery can have any capacity from 600mAHr to 1800mAHr.
+The battery can have any capacity from 600mA-hr to 1800mA-hr.
 
 We are assuming the battery is used all night and is flat in the morning.
 
-A 600mAHr battery will take 6-8 hours to fully charge with a 0.5watt panel and
-a 1800mAHr battery will take 2 days to charge with a 1 watt panel.
+A 600mA-hr battery will take 6-8 hours to fully charge with a 0.5watt panel and
+a 1800mA-hr battery will take 2 days to charge with a 1 watt panel.
 
 Each white LED requires about 20mA for good brightness and the 47R resistor
 will have to be adjusted to suit the battery voltage and the number of LEDs.
